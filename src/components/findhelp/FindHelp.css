@@ -1,0 +1,68 @@
+.safetyplan-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.safetyplan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+    margin: auto;
+    padding: 12px 12px 4px 12px;
+    border: 1px solid #2A404A;
+    border-radius: 5px;
+    margin-top: 5vh;
+}
+
+#map {
+    height: 700px;
+  }
+
+
+#collapse-container #collapse {
+    background-color: #BADED2;
+    border:1px solid #ffffff00;
+    box-shadow: none;
+}
+
+body {
+    background-color: transparent;
+}
+
+.card #collapse {
+    border: none;
+}
+
+.card {
+    border: none;
+}
+
+.collapse-chevron {
+    transition: all .5s ease-in-out;
+    transform: rotate(180deg);
+}
+
+.safety-plan-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.safety-plan-subhead {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25em;
+}
+
+.findhelp-main {
+    margin-top: 30vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.findhelp-main > button {
+    margin-top: 30px;
+}

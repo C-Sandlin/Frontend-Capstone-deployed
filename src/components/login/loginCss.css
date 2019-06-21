@@ -1,0 +1,106 @@
+form.ui.form.login-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 30px;
+    width: 30vw;
+    height: 60vh;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #2A404A;
+    margin-top: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.field:last-child {
+   margin-top: 20px;
+}
+
+.field:nth-child(2) {
+    margin-top: 50px;
+}
+
+input[type="email"] {
+    width: 100%;
+    color: #2A404A;;
+    padding: 10px;
+    border: 1px solid #2a404a;
+    border-radius: 3px;
+    background-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input[type="password"] {
+    width: 100%;
+    color: #2A404A;;
+    padding: 10px;
+    border: 1px solid #2a404a;
+    border-radius: 3px;
+    background-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+input[type="text"] {
+    width: 100%;
+    color: #2A404A;;
+    padding: 10px;
+    border: 1px solid #2a404a;
+    border-radius: 3px;
+    background-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#login-logo, #reg-logo {
+    height: 60px;
+    width: auto;
+ }
+
+button.ui.button {
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.ui.message.auth--message, .ui.message.auth-message {
+    margin-top: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #2a404a;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+form.ui.form.register-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 30px;
+    width: 30vw;
+    height: 55vh;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+
+form.ui.form.register-form button.ui.button {
+    margin-top: 60px;
+}

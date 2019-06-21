@@ -1,0 +1,873 @@
+{
+  "users": [
+    {
+      "email": "yaboi@yaboi.com",
+      "username": "yaboi",
+      "password": "",
+      "id": "B0sOnZbKsZUIfmAZbLg7NfV5yEi2"
+    },
+    {
+      "email": "shelby.sandlin092@gmail.com",
+      "username": "ShelbySandlin",
+      "password": "",
+      "id": "c9fSqCVSJbZRqlB69t95xqwaLMJ3"
+    },
+    {
+      "email": "wes@gmail.com",
+      "username": "wessandlin",
+      "password": "",
+      "id": "s6BrDKnUPpSv1jQVu6aPr9xZMDc2"
+    },
+    {
+      "email": "colinasandlin0024@gmail.com",
+      "username": "Colin Sandlin",
+      "password": "",
+      "id": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "profPic": "https://lh3.googleusercontent.com/N9hQMMXShidLE-b1OL--weeRhu1op47WuQ6_4FAf1y9EoPdHXxuGy17ZZfPao_SdZ9oPv8d086hYtzb4a0pOC5BRlKXrcHGW663gwaFY2us6jkhskuqka1DTZ6_gLi79Lbo486pX0KbfBL_BC5CMAFdzyj7IhHIoAIbeRMrl5EGnkE3ueR-s94CPohdwQshFwL83dwRlP0Hu6rPhxawt2qVqBZb4HQzFsnODF77hDNj9CoNyJs__11MsMAm_jqTJZNnXwXaX8P76SFYO-LKKu8R6hXgK3Yx4Q9iz6EtUFuHx8bk2_9DsZH5CDsoSqcbIfNcQoBWmoP0GzOb29PB_jhfoA3DCLRkZQa4yW4ceP8TPX4J8fE7383Jbd-1wB1AQvE53MKCqfuFT7D8xxx56wPYSIkCa_CSy2eGRO7tIEqP98oDDHm8XD9OZSl4AL57BHSi8glC1qSbC1-q0Nnq46B55mz2-tKzzwgsXlYIaTCsTEFzud8OJV9au1wctW6AlivKo6wD9t86wuNflzCVziqncD138e2V1yOwtJP1xZTIxpH4JUhCWCDHKCQYdNYTkoL2CYCIN4XdIP-3jMDICaOdamMWF-tMdMnNIkEknkYrCAmjDmvHg5DYGeWbm1D929zWriy-8LWzcvK4IYAHf-aMGhn6fcZ_t=s460-no"
+    },
+    {
+      "email": "troysandlin@troysandlin.com",
+      "username": "Troy Sandlin",
+      "password": "",
+      "id": "p49u4dMrtcfZlXiyYQbCKuEs55s1"
+    },
+    {
+      "email": "dude@dude.com",
+      "username": "dude man",
+      "password": "",
+      "id": "qsJhNzzw0uZHUl5RwNcwfQhLTqs2"
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "name": "Thankful",
+      "moodCategoryId": 5
+    },
+    {
+      "id": 2,
+      "name": "Joyful",
+      "moodCategoryId": 5
+    },
+    {
+      "id": 3,
+      "name": "Peaceful",
+      "moodCategoryId": 5
+    },
+    {
+      "id": 4,
+      "name": "Content",
+      "moodCategoryId": 5
+    },
+    {
+      "id": 5,
+      "name": "Excited",
+      "moodCategoryId": 5
+    },
+    {
+      "id": 6,
+      "name": "Balanced",
+      "moodCategoryId": 4
+    },
+    {
+      "id": 7,
+      "name": "Relaxed",
+      "moodCategoryId": 4
+    },
+    {
+      "id": 8,
+      "name": "Caring",
+      "moodCategoryId": 4
+    },
+    {
+      "id": 9,
+      "name": "Kind",
+      "moodCategoryId": 4
+    },
+    {
+      "id": 10,
+      "name": "Empathetic",
+      "moodCategoryId": 4
+    },
+    {
+      "id": 11,
+      "name": "Neutral",
+      "moodCategoryId": 3
+    },
+    {
+      "id": 12,
+      "name": "Lazy",
+      "moodCategoryId": 3
+    },
+    {
+      "id": 13,
+      "name": "Distracted",
+      "moodCategoryId": 3
+    },
+    {
+      "id": 14,
+      "name": "Bored",
+      "moodCategoryId": 3
+    },
+    {
+      "id": 15,
+      "name": "Mixed Up",
+      "moodCategoryId": 3
+    },
+    {
+      "id": 16,
+      "name": "Defeated",
+      "moodCategoryId": 2
+    },
+    {
+      "id": 17,
+      "name": "Discouraged",
+      "moodCategoryId": 2
+    },
+    {
+      "id": 18,
+      "name": "Isolated",
+      "moodCategoryId": 2
+    },
+    {
+      "id": 19,
+      "name": "Hurt",
+      "moodCategoryId": 2
+    },
+    {
+      "id": 20,
+      "name": "Powerless",
+      "moodCategoryId": 2
+    },
+    {
+      "id": 21,
+      "name": "Angry",
+      "moodCategoryId": 1
+    },
+    {
+      "id": 22,
+      "name": "Self Critical",
+      "moodCategoryId": 1
+    },
+    {
+      "id": 23,
+      "name": "Disgusted",
+      "moodCategoryId": 1
+    },
+    {
+      "id": 24,
+      "name": "Impatient",
+      "moodCategoryId": 1
+    },
+    {
+      "id": 25,
+      "name": "Jealous",
+      "moodCategoryId": 1
+    }
+  ],
+  "moodCategories": [
+    {
+      "id": 5,
+      "name": "Great",
+      "score": 5
+    },
+    {
+      "id": 4,
+      "name": "Good",
+      "score": 4
+    },
+    {
+      "id": 3,
+      "name": "Neutral",
+      "score": 3
+    },
+    {
+      "id": 2,
+      "name": "Not Great",
+      "score": 2
+    },
+    {
+      "id": 1,
+      "name": "Bad",
+      "score": 1
+    }
+  ],
+  "copingMechanisms": [
+    {
+      "id": 1,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "5-4-3-2-1 Grounding Exercise",
+      "url": "https://lh3.googleusercontent.com/W3ZXqhiYyD74U4VlPVhmtG2MFN6OriCKBWHl2hDAkuxEEqczM8W5-i0G6ErAW027VmZA5vvfvdceAaj_1WqlmslnNrHAZGFutJYlzo96FM9Lm-hIW7b2rFlV4Kv1Iiw0XgNxKJnm43THUIrt60POa5Mhze1WusviiMFZnCIbpn9-AX5qKa4vep7qnWYf0CR8Yvm2GiGwaCFZESvALbYkygR0wZoHnHfk8X4J4mPVDezfwNeLgpOkzGZ-AE9mZ88eLFmn4uQ1vMCyD2dKqWL2Jeb2L3vbv6UKdpplVFyruS2PLGT3iYqwAptFORp83tSCOC7eURmV-I_fZReXE-ULEgajRRbUXFKI7fmTKXIu1iP1dHawvgUphqyxVgMJbtesQAmsUz4P31zpq1l_OwSyKKIIkwTifLXdMp2VT-MdnJ2iG6jzT3Y59Rs_2Wz8VpymxqBXwT3y74E8yXhtiuWXVlgyZEI6s8Eh7JUMqBJtNDQT3EMt7ud2B67DK8_07moL1eGRRHn89uYg8XTlIB6qJPZ9Qkv7nWS0su92JuqlfxN_RXK1JQ8RvA_myDOIMxlLqdjbfIenz0h8mC9GMNyNvVBPujOwagIs3HjJVzOAh0XLiAdlTqTYvEPjK2Ve4n12Xfbrrp5c1zs4xfHEdYK0klacEPnXwCAA=s2196-no",
+      "info": "Slow it down!!!",
+      "info2": "Name 5 things I can see, 4 things I can touch, 3 things I can hear, 2 things I can smell, 1 thing I can do to distract myself or 1 thing I am doing well",
+      "moodCategoryId": 1,
+      "score": 10
+    },
+    {
+      "id": 2,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "Practice Gratitude",
+      "url": "https://lh3.googleusercontent.com/wt_0FIVZ7wsjK_r-u7o3D6Do0kisrYQW3o44M29AyaGHB-ZNFtWpjTpn-PcOG-Y44zjFkBqS2mS3kneq3Rr_Co5fJeFie8SHXylPVOhRVBJlvUbYemLzXxAvSUwJcdHRqvzhT9e8XaiBdKw68MZvDBCvUFdqqE9qrkPGP7OYfeeZ5VKL7abpb3pxbOywmi_KjqaVQ8w8qdHvu2UjgeF7ebxpSdnp6lXnkcToEwkDLfRQYRPIV4byd665HbNVsLxbp6bjamttBQFpjXZi28puHAfZ5h0w4tJck6bxXso-LQyHDn4Rtx_FI19ygU5CthT-UzDQn4IMueWtL9zs7sQTRdZWmBOPyXN3GrBwmcK4Vg6aBbpfSEnqXSyPsvNDjWsRf4LaCM49TepEXCrLGUB1HzGjf_ASwaZiOnL0Oq4EI8NBUkDWGavosDkBtJ0EDPgb_Tl5HO66FpR82-yhGzM0VdXHL1XvUvDUT-5jfhqVmjSeDF33PWoUEh7TWszCVNtJ9v4rQ0AykrF4mLYg-17bVudnu7ptg_L2PpYUjUJgAqbz4eMtNPcWTsUOERoCgk_NG69ic4sPMSOjHslWkev9SoLGS57Z7uohNKoYpM-UBSE7vz4oe9SV6Q5D8PPiOtCo_eypa2iVIbNyk6P-0JsyIgMWRh54syoL=w2198-h2196-no",
+      "info": "Researchers have found that being grateful can improve your state of mind. ",
+      "info2": "What are you grateful for today?",
+      "moodCategoryId": 3,
+      "score": 11
+    },
+    {
+      "id": 3,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "That's Awesome!",
+      "url": "https://lh3.googleusercontent.com/JqC50BJavBeQXGImCa33Som4UU4OSTg7y78g-JONeK_3dF-UEaPAZogtZS4FXzKtiEaEi-IlaZnWnR97WGsRItKsMpqp67V9nxCIAD2vNFoFX1b-Nkcf5gAdCaZuKIlxO5eovh--YdZsAzS1hxCRb4jfZfPKyfCG-Vm0PAZ97UMkJM8VF4oWzdoI04dUTDW8SRyM4jRF5kSuVpdcB5a1ZOXBvrBInvpDK8-TWFCkEkJ3HOj5zWQAIAn1Y_BqmN3-aFpRD1hVUKSporhu24aXDxQo4Ty14a0zkjok4lIhMDqL8mE7kYvNyB02PzAwIfRcmLWXmx9KgP9V_TvF2K1dAfX2Sd4E1K2W6xcr1ZOhFULUv61ur22Z-puYZoLaV_Tj63RPybCJYjF8MtAh-kNyxlVlgJ_PxOK_EaXBfUjgRKYdAkMGDECMPO_BJrEkl1MWUJlhsafjJX3-X21kDt1n0Um6yaA9TJD-AS6dzSYSmKX7Wb_GBz-UA-V82xDQJcowZNhxTpEcLaCmdk3tWkz8XkJkh499X3sA7kqo4cGXi5EF8ASt4NxbV2CqQsnzpb_rmLvQB3wMe6CNdOcKOV1o6COAOtzjnKILNLpBS5Xk472ol2BRfeWMMu01-KidghLcwvxAf0YCEJ6hQl1HOfqZ76DydxQ5c_-S=s2196-no",
+      "info": "Take some time to think about what is contributing to that.",
+      "info2": "Keep checking in!",
+      "moodCategoryId": 4,
+      "score": 10
+    },
+    {
+      "id": 4,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "Outstanding! Glad to hear you are feeling",
+      "url": "https://lh3.googleusercontent.com/wUo0vkZAvXEjL2b0MNk926N6CKe_ZtIiaobyktk9uVQb-jLZ9TIStiPZKJnOidkSM_S7vcXXozj65YjvXXJHKyLokgMYEyPOrzkmFLqdmPa_4bOnowfzcfF2rMQPWEYsXFtnGHsF_b-XL5zr4EEqSzDHtMGPflG1sIfrJ-_tujPV9LV6C67ydhBgwxtCmlHH-U55D71-_qTT3QqDWHzdClA8Pk1WYtwknqzuU8icTIhKbocDgGUhvXoi6TY0tuw8nFzUILrO-HmSRDytgTPIgmLwdufjmiu7xzgAbjidMxSMtPSFBDjcx_3qqI291k9N7PDc-HKbmnIflB5EfjAVuaX00A5BHItZI_Isn3OJ1ZDxH6wyyYo8GaJ295Q3POT1a4RWjxFLisVj7EDe3FUpIqVv8UDeVvime9o7KU0DwQNz9NtGsaAoAKPP7fe5Q_WlrL0IQzTkVGWW-iIXE_Xry67oOmy0BeewLoBWYbzTpLMHEWQNlGdYPXzSV2c52bJl1YHSTn7dYt7nEfNeJWGBZ1aC7glDOb5Jm3Xh8ALhtWviXzHIcGR3kc6TeyAwaoi2Ojbb5CkdHycpJNHuG-Jkz9Imc_Blo5XvhvLenvj3266XsPMrRjmcog2HzIqfZCAN-QtWgrKxlzVesFj9Cq-AU0DmQ8Udig5S=s2196-no",
+      "info": "Way to keep your mental health on track!",
+      "info2": "Keep checking in!",
+      "moodCategoryId": 5,
+      "score": 12
+    },
+    {
+      "id": 5,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "Go for a Walk",
+      "url": "https://lh3.googleusercontent.com/751FS_b3TuYAgJsig9J1PUCgrwU0w6uqX60DbllLY80NK77JzZIdKmGgGnxSnXTcCOom-r--AOuv649vnRfNHmhUf9YKi6MiA6kn3j6E3ofpVC2I3Tefzc-L3-wB0MhCmj-W4kcxSKClD8UIr5AOXVfWokReOQEme8K4KNMM5khud6sKg_CSrWOfanQW2AO4x4StPXIyKJSEvUc4HBFAi7i5m0QKH9Z_rdx2TQzShO0FrZdW-lCkDx2cXA_daeLLZQvOUzH6A0hgI70vTDCPcGwRA5iR0qO4oi90AZgGUH6mjZpUOt8IXfwbl2QI0o4EuCWQLvp0p0BgkC8x3JZXcLZC_QZhBFGtLTWnYtBDTA-_mQpQoSujfeawbw_sCW62ZjMiY4Q3PnWmSPTxvHzKJHpbleYrniIw2ap1DA9LGDrTMrO4cniPDeQn87QyFPLxC23sArt9tg9329Hqe-RMKkQR9-8ONblpJ-zs55bj9DSoTcbca2lSPUJe25AZwCEIlHvgw20T3xqm99eu7WUA0lnkP9Wv7OQUn5YHBMVUcIdn7LIu-UvKbUIN-sL-Nn6R5y6SNwopw1-lE0wBaA1TFNB8vqcDgLh_HdtUNdHgWTEAuf_rEQUcusP6nAugXRT18sytp37GbAjP2z324lXlUohM11FgDqj0=w2198-h2196-no",
+      "info": "Get moving for at least 15 minutes",
+      "info2": "Endorphins!",
+      "moodCategoryId": 3,
+      "score": 10
+    },
+    {
+      "id": 6,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "Go for a Walk",
+      "url": "https://lh3.googleusercontent.com/751FS_b3TuYAgJsig9J1PUCgrwU0w6uqX60DbllLY80NK77JzZIdKmGgGnxSnXTcCOom-r--AOuv649vnRfNHmhUf9YKi6MiA6kn3j6E3ofpVC2I3Tefzc-L3-wB0MhCmj-W4kcxSKClD8UIr5AOXVfWokReOQEme8K4KNMM5khud6sKg_CSrWOfanQW2AO4x4StPXIyKJSEvUc4HBFAi7i5m0QKH9Z_rdx2TQzShO0FrZdW-lCkDx2cXA_daeLLZQvOUzH6A0hgI70vTDCPcGwRA5iR0qO4oi90AZgGUH6mjZpUOt8IXfwbl2QI0o4EuCWQLvp0p0BgkC8x3JZXcLZC_QZhBFGtLTWnYtBDTA-_mQpQoSujfeawbw_sCW62ZjMiY4Q3PnWmSPTxvHzKJHpbleYrniIw2ap1DA9LGDrTMrO4cniPDeQn87QyFPLxC23sArt9tg9329Hqe-RMKkQR9-8ONblpJ-zs55bj9DSoTcbca2lSPUJe25AZwCEIlHvgw20T3xqm99eu7WUA0lnkP9Wv7OQUn5YHBMVUcIdn7LIu-UvKbUIN-sL-Nn6R5y6SNwopw1-lE0wBaA1TFNB8vqcDgLh_HdtUNdHgWTEAuf_rEQUcusP6nAugXRT18sytp37GbAjP2z324lXlUohM11FgDqj0=w2198-h2196-no",
+      "info": "Get moving for at least 15 minutes",
+      "info2": "Endorphins!",
+      "moodCategoryId": 2,
+      "score": 11
+    },
+    {
+      "id": 7,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "Reach out to a friend",
+      "url": "https://lh3.googleusercontent.com/L9fdTt1qDfGfk9wArtkznag4EA2h0qubW1pDy5mufHVjLDv_NRVsk1c1LP8jUqO6fD5F3EghScgIYh2ZIhKS1a3dTT0QsHts40mXknI3m7a69zm8gYTiJ-UhltkfWPTo9MAgStE_o5kv7yyIF-K_TEFL81nVzIho1iyBwPdOI7xSTnD_xKNlF5G8pnnWtVp-eOD7of4EoMZzTUOUEQfNJCcLsn0r-BwuwfhuQUcpR_vtiuhvoluaMLG0285zv6s_mkHPFgTxdNmhWZjkUOZ04UkDGpfozcow6Z_d8O5Pp0mTr9tC6xLILntRIoQN_eQVDzR6ebn4D4NuoW3YZakEQsg9LcFWO2pX61nX2ZZ-o5lCh04y_94bViIWvRIukJakSb_j_G9MhgnvkqNEu4zL3dEYcPeMNWKm5V4aP4dq9ElYy4r1gFWAckqfRwxXxjnGYrCvFYlqH29ie9szqN7JFR23dO6L5MwRla0mD3H25EYuUfVz902mtBoxUB6fBDInN8h65SZzndBs_sRLqB9Ku0pmJ76zojrzsCY5TtAmtUh8hLaIdlBzeIbaPukASeY4RkHvt4JtZz5QvXWqRv7HJqHoJD-vCfZjLxFHZLQHBmNfzOOHTBHWpb5H3aTdwJ45T62l3xQzHufzign6G93ffd66S34jcvyd=s2196-no",
+      "info": "Navigate to ‘SUPPORT’ to see list of close contacts.",
+      "info2": "JB has known you for 20 years. Hit him up.",
+      "moodCategoryId": 1,
+      "score": 11
+    },
+    {
+      "id": 8,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "Find a pickup basketball game",
+      "url": "https://lh3.googleusercontent.com/Ob7s6qK_Mg9bPJdW1lbzMuOly3OXweLMD6r12odJgM2hIR3MAe9YXJyEdh3t8WAqDV7J8t1xF2zgC0GvnZExA8rnss60av7Z-OlvTSKh5yHp1BdxYFBIoyIXJ_fC8YE7gHRi7x5mkOGmH_iVYqPy6aJV2UZkYd5luJI10nZeI9PEHVCYYZCSdiaFcRKpm9PYj24oscOFpjZDkfHYwbQz6CudKRUjr4PDZe3oBg1G5UXMHJQH7u-YvGlrFSGUy4poaaT-0rRAG_mi68LDUKzz5EzXk6RZi0RTv6osr1tjZwFz1sqYV5D-V3HT4EF3Cdd9yR02dG6R-nvE5kpzQaWdzuRgVpthUhHtqy8vESJWmbpDHbPXsEQRlEu_bEj2h60j3Gg4vqEMJsX7xmTExn8OO3H-2ERMnWDeLgYWaJaYp8Rh8c_21kdQvAVmPWXpj8rTGPo0GLqhz4mMW4x69yPXtcqWgetD0lg94-ex09Qkigfg5LUEcQC2EjsgZEzrqmTX7K3b89zFZszu1rNF62xqC2bQZpoRJzkrsQvI41YpSW4ZXdNtpqAipwhhfTb93bdhQRG1-_NeA-39A8PU7IN_NykQiyyAzOLU2Ix3wfI1stBGcNgBS11yLjbQVzLU1BhBSTyXRhZz4jvspelNjdfNvyNRJ2KYIPev=s2196-no",
+      "info": "Tend to the part of yourself that needs connection and activity.",
+      "info2": "Check out the local YMCA or the Meetup app",
+      "moodCategoryId": 2,
+      "score": 10
+    },
+    {
+      "id": 9,
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "title": "Practice Mindfulness!",
+      "url": "https://lh3.googleusercontent.com/lOFOzyMsCAQz2hiVhsLw5PdY6r1q_Kw5Lqhll0X7VrNSvYxb6dPVupAHVoHX19JMUSyDA1zbX7p9DM7ZCpTu7iOw5tJwvakY_0ZFOjYCKynkXfi6be_SFCBJIGIBc4sCwbVOgmg54LmEweI4_LJp-cjShK_N7BTgKd6xBRRepU0r60M7CBz1Kh5y8bJAxtbo1jI__bYzATibGV0onLQ7aWToznE8_3NI8CjBv0BKMi_eKlXth84tQyQTSQznjC7n7LObpnQG4t3Cu1kdPyBQ8tHKi42oocN6xc5HRuqnyvHGNNAtZb0hRgWIU1qosdA3_YyURQDpjDiRdymnfkrfN6PhvNEbCSKORtYMXeMwv9_L_mb2C9hhxSMmBCqXBPlMUeFSkEYdHD7vsUmYhkRtzMAzSui8rkEmZD1bMRvNzK66mEJD0ko9Ki83usvkXyi47WkA6KIhlmHvEpF7I5PdCU2dzofWWKzTvqms3tj9mKUo_KWA0z-5gKt-9VbWAXJLIopeVDlgudOiK9UBcnoc1TlT-8LY3iNGppev2hwASlCqwtQwdTJrh0kzlm7OQzT6kQm1Ia_lk1TqjPCvvnL_H33oqEhI6rBiQ7WUjWL3cIyfMJqdL8DOHnqjYejQaiCQAIxq9UXOWltoGz4skzl7irM8Z1slENp1=s2196-no",
+      "info": "It can be beneficial to approach your emotions with a nonjudgemental attitude.",
+      "info2": "Fully feeling it and being curious about your emotions can make room for healing.",
+      "moodCategoryId": 2,
+      "score": 10
+    }
+  ],
+  "loggedEntries": [
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-15T16:42:34.021Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Thankful",
+      "description": "Today was a good day because I got to spend time with family, play at the pool, and get outside.",
+      "id": 1
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T05:42:34.021Z",
+      "moodCategoryId": 3,
+      "selectedMood": "Bored",
+      "description": "Work today was very boring and uninteresting.",
+      "id": 2
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T05:42:34.021Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Angry",
+      "description": "My friends went and hung out without letting me know.",
+      "id": 3
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-16T19:09:56.116Z",
+      "moodCategoryId": 2,
+      "selectedMood": "Discouraged",
+      "description": "Discouraging things are discouraging",
+      "id": 4
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-16T19:28:08.712Z",
+      "moodCategoryId": 2,
+      "selectedMood": "Discouraged",
+      "description": "I have not watched my weight this week",
+      "id": 5
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-16T19:28:57.079Z",
+      "moodCategoryId": 3,
+      "selectedMood": "Neutral",
+      "description": "I feel like I'm in neutral in life",
+      "id": 6
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T13:57:11.834Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Thankful",
+      "description": "because its monday",
+      "id": 7
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:03:09.871Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Peaceful",
+      "description": "peace dawg",
+      "id": 8
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:06:26.745Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Excited",
+      "description": "Excited to get this thing over with!",
+      "id": 9
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:09:59.070Z",
+      "moodCategoryId": 3,
+      "selectedMood": "Mixed Up",
+      "description": "All Mixed up like 311",
+      "id": 10
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:10:34.675Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Self Critical",
+      "description": "I'm my own worst critic",
+      "id": 11
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:11:49.936Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Joyful",
+      "description": "asdfasdf",
+      "id": 12
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:13:10.270Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Peaceful",
+      "description": "Peace and love homies",
+      "id": 13
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:13:35.326Z",
+      "moodCategoryId": 4,
+      "selectedMood": "Kind",
+      "description": "Kind of scary",
+      "id": 14
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:28:52.277Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Joyful",
+      "description": "Joy to the world",
+      "id": 15
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:40:34.664Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Content",
+      "description": "Soy contento",
+      "id": 16
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T14:46:27.847Z",
+      "moodCategoryId": 2,
+      "selectedMood": "Powerless",
+      "description": "POWAAA",
+      "id": 17
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T18:03:41.708Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "Does this graph work or nah?",
+      "id": 18
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T18:10:47.991Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "Patience Patience Patience",
+      "id": 19
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2018-06-17T18:10:47.991Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "Patience Patience Patience",
+      "id": 20
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-17T18:53:04.547Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Self Critical",
+      "description": "asdfasdf",
+      "id": 21
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-01-17T18:53:04.547Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Self Critical",
+      "description": "asdfasdf",
+      "id": 22
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-01-17T18:53:04.547Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Self Critical",
+      "description": "asdfasdf",
+      "id": 23
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-02-17T18:53:04.547Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Self Critical",
+      "description": "asdfasdf",
+      "id": 24
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-03-17T18:53:04.547Z",
+      "moodCategoryId": 3,
+      "selectedMood": "Self Critical",
+      "description": "asdfasdf",
+      "id": 25
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-03-17T18:53:04.547Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Self Critical",
+      "description": "asdfasdf",
+      "id": 26
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-05-15T16:42:34.021Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Thankful",
+      "description": "Today was a good day because I got to spend time with family, play at the pool, and get outside.",
+      "id": 27
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-05-15T16:42:34.021Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Thankful",
+      "description": "Today was a good day because I got to spend time with family, play at the pool, and get outside.",
+      "id": 28
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-05-15T16:42:34.021Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Thankful",
+      "description": "Today was a good day because I got to spend time with family, play at the pool, and get outside.",
+      "id": 29
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-18T19:48:24.736Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Peaceful",
+      "description": "I'm at a good spot on my app, so now I can relax a little.",
+      "id": 30
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T19:58:10.389Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfasdfsdf",
+      "id": 31
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:03:31.293Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "ghdgd",
+      "id": 32
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:07:32.323Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "gfdgfdf",
+      "id": 33
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:08:19.390Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asdf",
+      "id": 34
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:15:32.349Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asdfsdfa",
+      "id": 35
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:16:03.785Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "asdfasdf",
+      "id": 36
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:22:46.214Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asfsf",
+      "id": 37
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:23:19.695Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfasd",
+      "id": 38
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:29:58.621Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfsdf",
+      "id": 39
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:30:36.768Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "asdf",
+      "id": 40
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:43:17.938Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Self Critical",
+      "description": "asdfasdfad",
+      "id": 41
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:44:02.178Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "asdfasfdas",
+      "id": 42
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:49:11.022Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfasd",
+      "id": 43
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T20:57:18.606Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asfasdfas",
+      "id": 44
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T21:03:42.564Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfsfads",
+      "id": 45
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T21:07:42.390Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asdfasf",
+      "id": 46
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T21:08:31.844Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Joyful",
+      "description": "asdfasfsad",
+      "id": 47
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T21:09:09.000Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Peaceful",
+      "description": "asdfads",
+      "id": 48
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T23:17:23.294Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Joyful",
+      "description": "Because I'm almost done!",
+      "id": 49
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-19T23:17:44.113Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "At Shelby!!!! UGH!",
+      "id": 50
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:08:40.592Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asdfasd",
+      "id": 51
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:09:06.951Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfas",
+      "id": 52
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:09:43.496Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "asdfsfa",
+      "id": 53
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:13:06.740Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asfasdf",
+      "id": 54
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:13:28.252Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Joyful",
+      "description": "asdfasf",
+      "id": 55
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:15:05.692Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Peaceful",
+      "description": "asdfasfs",
+      "id": 56
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:15:48.492Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Self Critical",
+      "description": "asdfs",
+      "id": 57
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:16:42.896Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "asfas",
+      "id": 58
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:17:32.811Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdf",
+      "id": 59
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:17:43.250Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "asdfasf",
+      "id": 60
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:17:51.932Z",
+      "moodCategoryId": 2,
+      "selectedMood": "Isolated",
+      "description": "asdfasd",
+      "id": 61
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:39:23.065Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Jealous",
+      "description": "asffd",
+      "id": 62
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:43:27.437Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfasf",
+      "id": 63
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:44:23.563Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Impatient",
+      "description": "asdfsfd",
+      "id": 64
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:52:29.362Z",
+      "moodCategoryId": 2,
+      "selectedMood": "Powerless",
+      "description": "asfasfsdf",
+      "id": 65
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:53:44.729Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "kh",
+      "id": 66
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:54:02.046Z",
+      "moodCategoryId": 5,
+      "selectedMood": "Joyful",
+      "description": "kjhkj",
+      "id": 67
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:55:01.768Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "mjhkj",
+      "id": 68
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:55:11.192Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Self Critical",
+      "description": "kjhkj",
+      "id": 69
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:55:22.427Z",
+      "moodCategoryId": 2,
+      "selectedMood": "Powerless",
+      "description": "kjhkj",
+      "id": 70
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:55:30.995Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "jhgh",
+      "id": 71
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T15:55:42.315Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Disgusted",
+      "description": "kj",
+      "id": 72
+    },
+    {
+      "userId": "xjPnoylYEMhbfpQI5XKYV8cRuGf2",
+      "dateLogged": "2019-06-20T16:00:43.834Z",
+      "moodCategoryId": 1,
+      "selectedMood": "Self Critical",
+      "description": "asdfsdf",
+      "id": 73
+    }
+  ]
+}
