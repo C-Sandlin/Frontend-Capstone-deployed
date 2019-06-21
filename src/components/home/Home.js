@@ -11,8 +11,8 @@ import FindHelp from '../findhelp/FindHelp'
 import Profile from '../profile/Profile'
 import NewRegulate from '../regulate/NewRegulate'
 import Entries from '../entries/Entries'
-import { getUserFromLocalStorage, logout } from '../login/LoginHandler'
-import API from "../db/API"
+import { getUserFromLocalStorage, logout } from '../login/LoginHandler';
+import API from "../db/API";
 import moment from "moment";
 import * as emailjs from "emailjs-com"
 import { serviceId, userId, accessToken, templateId } from "../db/hiddenKey"
@@ -98,7 +98,6 @@ class Home extends Component {
             monthsEntries: [],
             lineData: [],
         }
-
 
         //Fetch moods from local API by specifying which category to fetch. Then, put those returned promises into new state, and finally setting the state.
         API.getSpecificMood(5)

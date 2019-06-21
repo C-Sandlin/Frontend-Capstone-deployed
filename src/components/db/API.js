@@ -1,27 +1,28 @@
 import { getUserFromLocalStorage } from '../login/LoginHandler'
+import { appId, appCode } from "./hiddenKey";
 
-import APIkey from "./hiddenKey"
-import { appId, appCode } from "./hiddenKey"
 const db = "http://localhost:8088"
+const fb = "https://colins-capstone-1558565262749.firebaseio.com"
+
 
 let thisUser = getUserFromLocalStorage()
-
 let currentUser = (thisUser) ? (thisUser.id) : ("")
 
 
 const API = {
-    googleMaps: () => {
-        // CORB ERROR
-        return fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=36.132930, -86.756625&radius=24140.2&keyword=counselor&key=${APIkey}`)
-            .then(w => w.json())
-    },
     getAllMoods: () => {
         return fetch(`${db}/moods?_expand=moodCategory`)
             .then(results => results.json())
     },
     getSpecificMood: (id) => {
-        return fetch(`${db}/moods?moodCategoryId=${id}`)
+        return fetch(`${fb}/moods.json?orderBy="moodCategoryId"&startAt=${id}&endAt=${id}`)
             .then(results => results.json())
+            .then(e => {
+                const data = e
+                return Object.keys(data).map(key => {
+                    return { id: key, ...data[key] }
+                })
+            })
     },
     submitEntry: (obj) => {
         return fetch(`${db}/loggedEntries`, {
@@ -34,12 +35,28 @@ const API = {
             .then(e => e.json())
     },
     getSpecificCopingMech: (id) => {
-        return fetch(`${db}/copingMechanisms?moodCategoryId=${id}&userId=${currentUser}`)
+        return fetch(`${fb}/copingMechanisms.json?orderBy="moodCategoryId"&equalTo=${id}&print=pretty`)
             .then(results => results.json())
+            .then(e => {
+                const data = e
+                return Object.keys(data).map(key => {
+                    return { id: key, ...data[key] }
+                })
+            })
+            .then(e => {
+                let desiredResults = e.filter(item => item.userId === currentUser)
+                return desiredResults;
+            })
     },
     getAllCopingMechs: () => {
-        return fetch(`${db}/copingMechanisms?userId=${currentUser}`)
+        return fetch(`${fb}/copingMechanisms.json?orderBy="userId"&equalTo="${currentUser}"&print=pretty`)
             .then(results => results.json())
+            .then(e => {
+                const data = e
+                return Object.keys(data).map(key => {
+                    return { id: key, ...data[key] }
+                })
+            })
     },
     editCopingMech: (entryId, entryObj) => {
         return fetch(`${db}/copingMechanisms/${entryId}`, {
@@ -93,7 +110,6 @@ const API = {
             },
             body: JSON.stringify(obj)
         })
-        // .then(e => e.json())
     }
 }
 
