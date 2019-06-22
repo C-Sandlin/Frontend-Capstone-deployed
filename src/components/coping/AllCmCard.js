@@ -27,6 +27,7 @@ export default class AllCmCard extends Component {
         editCopingMoodCategoryId: this.props.copingMechMoodCategory,
         upvote: false,
         downvote: false,
+        score: this.props.copingMechScore
     }
 
     handleFieldChange = evt => {
@@ -54,7 +55,8 @@ export default class AllCmCard extends Component {
             url: this.state.editUrl,
             info: this.state.editInfo,
             info2: this.state.editInfo2,
-            moodCategoryId: parseInt(this.state.editCopingMoodCategoryId)
+            moodCategoryId: parseInt(this.state.editCopingMoodCategoryId),
+            score: this.state.score
         }
         console.log("update", newObj)
         let newState = {
