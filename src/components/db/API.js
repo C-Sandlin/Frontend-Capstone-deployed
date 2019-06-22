@@ -86,7 +86,7 @@ const API = {
             .then(e => e.json())
     },
     deleteMech: (id) => {
-        return fetch(`${db}/copingMechanisms/${id}`, {
+        return fetch(`${fb}/copingMechanisms/${id}.json`, {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json'

@@ -2,6 +2,16 @@ import L from 'leaflet';
 import React, { Component } from "react";
 import { mapboxAPIkey } from "../db/hiddenKey"
 
+var redIcon = new L.Icon({
+    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+});
+
+
 
 
 
@@ -13,9 +23,14 @@ export default class Map extends Component {
     componentDidMount() {
         //create original view of map when loaded, set to generic Tennessee Coordinates and a (not very close zoom)
         this.map = L.map('map').setView([35.860119, -86.660156], 8);
-        L.marker([36.132930, -86.756625])
-            .bindPopup('This is your current <strong>location</strong>')
-            .addTo(this.map);
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(yourPosition => {
+                let coords = yourPosition.coords;
+                L.marker([coords.latitude, coords.longitude], { icon: redIcon }, 12)
+                    .bindPopup('This is your <strong>current location</strong>')
+                    .addTo(this.map);
+            })
+        }
 
         // get the tiles from open source maps (this is just the base layer of map tiles combined.)
         L.tileLayer('https://api.mapbox.com/styles/v1/csandlin010/cjwwgtxl636bg1cphchbfirr1/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiY3NhbmRsaW4wMTAiLCJhIjoiY2p3dzhoZXJiMGhhcTQ5bnRraXRqbHk1dyJ9.Ra3al6vYoRySE9W33sYI1A', {
@@ -26,18 +41,19 @@ export default class Map extends Component {
         }).addTo(this.map);
 
 
-        if (navigator.geolocation) {
+        if (navigator.geolocation && this.props.locationResults) {
             navigator.geolocation.getCurrentPosition(position => {
                 let coords = position.coords;
                 this.map.setView([coords.latitude, coords.longitude], 12);
 
 
-                var markerOptions = {
-                    riseOnHover: true,
-                }
+                // let markerOptions = {
+                //     riseOnHover: true,
+                // }
+
 
                 this.props.locationResults.map(location => {
-                    L.marker([location.position[0], location.position[1]], markerOptions)
+                    L.marker([location.position[0], location.position[1]])
                         .bindPopup(`<h6>${location.title}</h6><p>+1 (601) 285-3672</p><p>${location.vicinity}</p>`)
                         .addTo(this.map);
                 })
