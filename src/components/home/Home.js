@@ -244,7 +244,6 @@ class Home extends Component {
         API.getLast5Entries()
             .then(entries => {
                 let last5Array = entries.filter(entry => entry.moodCategoryId <= 2)
-                console.log(last5Array)
                 return last5Array;
             })
             .then(last5Array => {
@@ -259,8 +258,6 @@ class Home extends Component {
                         }
                     }
                     API.sendEmail(data)
-                } else {
-                    console.log("youre good")
                 }
             })
     }
@@ -293,7 +290,7 @@ class Home extends Component {
             moodCategoryId: parseInt(this.state.addCopingMoodCategoryId),
             score: 0
         }
-        console.log("new entry", newObj)
+
         API.submitMech(newObj)
             .then(() => API.getAllCopingMechs())
             .then(copingMechs => newState.allCopingMechs = copingMechs)
@@ -391,13 +388,10 @@ class Home extends Component {
             this.state.allEntries.map(entry => {
                 if (moment(entry.dateLogged).isBetween(from_date1, to_date1)) {
                     group1Entries.push(entry.moodCategoryId)
-                    console.log("group1", group1Entries)
                 } else if (moment(entry.dateLogged).isBetween(from_date2, to_date2)) {
                     group2Entries.push(entry.moodCategoryId)
-                    console.log("group2", group2Entries)
                 } else if (moment(entry.dateLogged).isBetween(from_date3, to_date3)) {
                     group3Entries.push(entry.moodCategoryId)
-                    console.log("group3", group3Entries)
                 } else if (moment(entry.dateLogged).isBetween(from_date4, to_date4)) {
                     group4Entries.push(entry.moodCategoryId)
                 } else if (moment(entry.dateLogged).isBetween(from_date5, to_date5)) {
@@ -407,7 +401,6 @@ class Home extends Component {
                 }
             })
 
-            console.log(group1Entries);
 
             // add up values in each month's array
             let group1value = group1Entries.reduce((a, b) => a + b, 0)

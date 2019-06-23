@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import Carousel from 're-carousel'
 import IndicatorDots from './indicator-dots'
-import GreatCmCard from './GreatCmCard'
-import GoodCmCard from './GoodCmCard'
-import OkayCmCard from './OkayCmCard'
-import NotSoGreatCmCard from './NotSoGreatCmCard'
-import BadCmCard from './BadCmCard'
 import AllCmCard from './AllCmCard'
 import GenericCmCard from './GenericCmCard'
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';

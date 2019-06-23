@@ -58,7 +58,6 @@ export default class AllCmCard extends Component {
             moodCategoryId: parseInt(this.state.editCopingMoodCategoryId),
             score: this.state.score
         }
-        console.log("update", newObj)
         let newState = {
             allCopingMechs: [],
             editModal: !this.state.editModal
@@ -96,7 +95,7 @@ export default class AllCmCard extends Component {
 
         API.editCopingMech(newScore.id, newScore)
             .then(() => this.props.loadCms())
-            .then(() => console.log("downVote allcard", this.props))
+            .then(() => ("downVote allcard", this.props))
             .then(() => this.setState({ downvote: true }))
     }
 
