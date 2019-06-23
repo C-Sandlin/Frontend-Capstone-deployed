@@ -10,10 +10,6 @@ let currentUser = (thisUser) ? (thisUser.id) : ("")
 
 
 const API = {
-    getAllMoods: () => {
-        return fetch(`${db}/moods?_expand=moodCategory`)
-            .then(results => results.json())
-    },
     // working
     getSpecificMood: (id) => {
         return fetch(`${fb}/moods.json?orderBy="moodCategoryId"&startAt=${id}&endAt=${id}`)
@@ -85,6 +81,7 @@ const API = {
         })
             .then(e => e.json())
     },
+    // working
     deleteMech: (id) => {
         return fetch(`${fb}/copingMechanisms/${id}.json`, {
             method: "DELETE",

@@ -1,7 +1,7 @@
 import * as firebase from "firebase/app";
 import 'firebase/auth';
 
-const url = 'http://localhost:8088/users';
+const url = 'https://colins-capstone-1558565262749.firebaseio.com/users.json';
 
 const setUserInLocalStorage = (user) => {
     localStorage.setItem('user', JSON.stringify(user));
@@ -49,7 +49,7 @@ export const register = (newUser) => {
             return newUserFromJsonServer
         })
         .catch(error => {
-            //finish later
+            alert("there was an error registering.")
         })
 }
 

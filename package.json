@@ -9,6 +9,7 @@
     "chartjs-color": "^2.3.0",
     "emailjs-com": "^2.3.2",
     "firebase": "^6.1.0",
+    "firebase-tools": "^7.0.1",
     "grommet": "^2.7.1",
     "leaflet": "^1.5.1",
     "leaflet-providers": "^1.8.0",
