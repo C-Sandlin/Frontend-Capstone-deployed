@@ -149,8 +149,8 @@ export default class AllCmCard extends Component {
                                     <option ></option>
                                     <option value={5}>Great</option>
                                     <option value={4}>Good</option>
-                                    <option value={3}>Okay</option>
-                                    <option value={2}>Not So Great</option>
+                                    <option value={3}>Neutral</option>
+                                    <option value={2}>Not Great</option>
                                     <option value={1}>Bad</option>
                                 </Input>
                             </FormGroup>
