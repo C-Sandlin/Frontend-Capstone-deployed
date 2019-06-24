@@ -23,18 +23,70 @@ export const saveUserToJsonServer = (newUser) => {
         body: JSON.stringify(newUser)
     })
         .then(response => response.json())
-        .then(newUser => {
-            setUserInLocalStorage(newUser);
-            return newUser;
+        .then(r => {
+            return fetch(`https://colins-capstone-1558565262749.firebaseio.com/users/${r.name}.json`)
         })
+        .then(r => r.json())
+        .then(r => {
+            console.log("newlyreturneduser", r)
+            let user = {
+                email: r.email,
+                username: r.username,
+                id: r.id
+            }
+            return user
+        })
+        .then(user => {
+            setUserInLocalStorage(user);
+            return user
+        })
+
 }
 
 export const getUserFromLocalStorage = () => {
     const user = localStorage.getItem('user');
 
     if (!user) return null;
+    console.log(JSON.parse(user))
 
     return JSON.parse(user);
+}
+
+export const getUser = (userId) => {
+    return fetch(`https://colins-capstone-1558565262749.firebaseio.com/users/${userId}.json?&print=pretty`)
+        .then(results => results.json())
+}
+
+export const logout = () => {
+    localStorage.removeItem('user');
+}
+
+export const login = (email, password) => {
+    return firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(user => {
+            console.log(user.user.uid)
+            return fetch(`https://colins-capstone-1558565262749.firebaseio.com/users.json?orderBy="id"&equalTo="${user.user.uid}"&print=pretty`)
+        })
+        .then(results => results.json())
+        .then(e => {
+            const data = e
+            return Object.keys(data).map(key => {
+                return { id: key, ...data[key] }
+            })
+        })
+        .then(r => {
+            console.log("r", r)
+            let user = {
+                email: r[0].email,
+                username: r[0].username,
+                id: r[0].id
+            }
+            return user
+        })
+        .then(user => {
+            setUserInLocalStorage(user);
+            return user
+        })
 }
 
 export const register = (newUser) => {
@@ -44,49 +96,7 @@ export const register = (newUser) => {
             newUser.id = firebaseId;
             return saveUserToJsonServer(newUser)
         })
-        .then(newUserFromJsonServer => {
-            setUserInLocalStorage(newUserFromJsonServer)
-            return newUserFromJsonServer
-        })
         .catch(error => {
             alert("there was an error registering.")
         })
-}
-
-export const getUser = (userId) => {
-    return fetch(`${url}/${userId}`)
-        .then(res => res.json());
-}
-
-export const logout = () => {
-    localStorage.removeItem('user');
-}
-
-export const registerWithFirebase = (email, password) => {
-    return firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(data => {
-            return data.user.uid
-        })
-}
-
-export const loginWithFirebase = (email, password) => {
-    return firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(data => {
-            return data.user.uid
-        })
-}
-
-export const login = (email, password) => {
-    return loginWithFirebase(email, password)
-        .then(firebaseId => {
-            return getUser(firebaseId);
-        })
-        .then(userFromJsonServer => {
-            setUserInLocalStorage(userFromJsonServer)
-            return userFromJsonServer;
-        })
-        .catch(error => {
-            alert('There was a problem logging in.')
-        });
-
 }

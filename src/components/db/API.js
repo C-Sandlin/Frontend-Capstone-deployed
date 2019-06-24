@@ -126,10 +126,10 @@ const API = {
                 return desiredResults;
             })
     },
-    getLast5Entries: () => {
-        return fetch(`${db}/loggedEntries/?userId=${currentUser}&_sort=dateLogged&_order=desc&_limit=5`)
-            .then(results => results.json())
-    },
+    // getLast5Entries: () => {
+    //     return fetch(`${db}/loggedEntries/?userId=${currentUser}&_sort=dateLogged&_order=desc&_limit=5`)
+    //         .then(results => results.json())
+    // },
     // working
     sendEmail: (obj) => {
         return fetch('https://api.emailjs.com/api/v1.0/email/send', {

@@ -201,6 +201,8 @@ class Home extends Component {
         this.setState(origState)
     }
 
+
+
     logNewEntry = () => {
 
         this.setState({ loader: true })
@@ -234,35 +236,35 @@ class Home extends Component {
             .then(() => this.entriesThisMonth())
 
             //
-            .then(() => this.checkLast5Entries())
+            // .then(() => this.checkLast5Entries())
 
             // after the animation ends, redirect to coping mechanisms
             .then(() => setTimeout(() => this.props.history.push('/coping'), 3200))
     }
 
-    checkLast5Entries = () => {
-        API.getLast5Entries()
-            .then(entries => {
-                let last5Array = entries.filter(entry => entry.moodCategoryId <= 2)
-                return last5Array;
-            })
-            .then(last5Array => {
-                if (last5Array.length === 5) {
-                    let data = {
-                        service_id: serviceId,
-                        template_id: templateId,
-                        user_id: userId,
-                        template_params: {
-                            'to_name': 'Shelby',
-                            'from_name': 'Colin Sandlin'
-                        }
-                    }
-                    API.sendEmail(data)
-                }
-            })
-    }
+    // checkLast5Entries = () => {
+    //     API.getLast5Entries()
+    //         .then(entries => {
+    //             let last5Array = entries.filter(entry => entry.moodCategoryId <= 2)
+    //             return last5Array;
+    //         })
+    //         .then(last5Array => {
+    //             if (last5Array.length === 5) {
+    //                 let data = {
+    //                     service_id: serviceId,
+    //                     template_id: templateId,
+    //                     user_id: userId,
+    //                     template_params: {
+    //                         'to_name': 'Shelby',
+    //                         'from_name': 'Colin Sandlin'
+    //                     }
+    //                 }
+    //                 API.sendEmail(data)
+    //             }
+    //         })
+    // }
 
-    // serviceID, userID, accessToken, templateID
+
 
     select = (event, value) => {
         this.setState({
@@ -462,6 +464,7 @@ class Home extends Component {
                                 changeDesc={this.changeDesc}
                                 loader={this.state.loader}
                                 check={this.state.check}
+                                newUserLoginNavigateToEntries={this.newUserLoginNavigateToEntries}
                             />
                         </>)
                         : (<Redirect to="/login" />)

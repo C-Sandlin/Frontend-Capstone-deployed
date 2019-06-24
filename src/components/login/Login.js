@@ -15,6 +15,7 @@ export default class Login extends Component {
     submit = () => {
         login(this.state.email, this.state.password)
             .then(user => {
+                console.log("right before user is put into state", user)
                 this.props.onLogin(user);
                 this.props.history.push('/regulate')
             })
