@@ -28,7 +28,7 @@ export const saveUserToJsonServer = (newUser) => {
         })
         .then(r => r.json())
         .then(r => {
-            console.log("newlyreturneduser", r)
+
             let user = {
                 email: r.email,
                 username: r.username,
@@ -45,10 +45,7 @@ export const saveUserToJsonServer = (newUser) => {
 
 export const getUserFromLocalStorage = () => {
     const user = localStorage.getItem('user');
-
     if (!user) return null;
-    console.log(JSON.parse(user))
-
     return JSON.parse(user);
 }
 
@@ -64,7 +61,7 @@ export const logout = () => {
 export const login = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)
         .then(user => {
-            console.log(user.user.uid)
+
             return fetch(`https://colins-capstone-1558565262749.firebaseio.com/users.json?orderBy="id"&equalTo="${user.user.uid}"&print=pretty`)
         })
         .then(results => results.json())
@@ -75,7 +72,7 @@ export const login = (email, password) => {
             })
         })
         .then(r => {
-            console.log("r", r)
+
             let user = {
                 email: r[0].email,
                 username: r[0].username,

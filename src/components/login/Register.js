@@ -15,7 +15,7 @@ export default class Register extends Component {
     submit = () => {
         register(this.state)
             .then((newUser) => {
-                console.log("right before user is put into state", newUser)
+
                 this.props.onRegister(newUser)
                 this.props.history.push('/regulate')
             })
