@@ -407,10 +407,10 @@ class Home extends Component {
             // add up values in each month's array
             let group1value = group1Entries.reduce((a, b) => a + b, 0)
             let group2value = group2Entries.reduce((a, b) => a + b, group1value)
-            let group3value = group2Entries.reduce((a, b) => a + b, group2value)
-            let group4value = group2Entries.reduce((a, b) => a + b, group3value)
-            let group5value = group2Entries.reduce((a, b) => a + b, group4value)
-            let group6value = group2Entries.reduce((a, b) => a + b, group5value)
+            let group3value = group3Entries.reduce((a, b) => a + b, group2value)
+            let group4value = group4Entries.reduce((a, b) => a + b, group3value)
+            let group5value = group5Entries.reduce((a, b) => a + b, group4value)
+            let group6value = group6Entries.reduce((a, b) => a + b, group5value)
 
             // find value for the month data point by taking total sum of moodCategoryId and dividing by total entries so far
             let janLog = (group1value / (group1Entries.length));
