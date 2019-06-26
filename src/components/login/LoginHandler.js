@@ -46,6 +46,8 @@ export const saveUserToJsonServer = (newUser) => {
 export const getUserFromLocalStorage = () => {
     const user = localStorage.getItem('user');
     if (!user) return null;
+
+    console.log(user)
     return JSON.parse(user);
 }
 
