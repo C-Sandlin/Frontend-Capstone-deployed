@@ -9,6 +9,7 @@ let thisUser = getUserFromLocalStorage()
 let currentUser = (thisUser) ? (thisUser.id) : ("")
 
 
+
 const API = {
     // working
     getSpecificMood: (id) => {
@@ -106,9 +107,10 @@ const API = {
                 return desiredResults;
             })
     },
+
     // working
-    hereMaps: () => {
-        return fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=36.1373%2C-86.7557&q=mental%20health&size=20&app_id=${appId}&app_code=${appCode}`)
+    hereMaps: (lat, long) => {
+        return fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${lat}%2C${long}&q=mental%20health&size=20&app_id=${appId}&app_code=${appCode}`)
             .then(results => results.json())
     },
     // working
