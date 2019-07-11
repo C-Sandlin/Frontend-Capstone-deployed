@@ -48,7 +48,7 @@ export default class Map extends Component {
 
                 this.props.locationResults.map(location => {
                     L.marker([location.position[0], location.position[1]])
-                        .bindPopup(`<h6>${location.title}</h6><p>+1 (601) 285-3672</p><p>${location.vicinity}</p>`)
+                        .bindPopup(`<h6>${location.title}</h6><p>${location.vicinity}</p>`)
                         .addTo(this.map);
                 })
             })
