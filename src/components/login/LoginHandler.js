@@ -106,10 +106,6 @@ export const login = (email, password) => {
         setUserInLocalStorage(user);
         return user;
       })
-      .catch(error => {
-        console.log(error.message);
-        alert(`There was an error logging in. ${error.message}`);
-      })
   );
 };
 
@@ -123,9 +119,6 @@ export const register = newUser => {
       newUser.id = firebaseId;
       return saveUserToJsonServer(newUser);
     })
-    // if there is an error, throw this message
-    .catch(error => {
-      console.log(error.message);
-      alert(`There was an error registering. ${error.message}`);
-    });
+  // if there is an error, throw this message
+
 };

@@ -23,6 +23,8 @@ firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
     <Router>
+
         <Home />
+
     </Router>
     , document.getElementById('root'))

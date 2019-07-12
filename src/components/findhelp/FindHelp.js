@@ -24,6 +24,10 @@ export default class Contact extends Component {
         this.setState({ modal: !this.state.modal });
     }
 
+    componentDidMount() {
+        console.log("findHelp is mounted")
+    }
+
 
     render() {
         return (
