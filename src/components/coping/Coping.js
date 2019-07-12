@@ -17,7 +17,7 @@ const theUserIdIs = getUserFromLocalStorage()
 export default class Coping extends Component {
 
     state = {
-        userId: (theUserIdIs.id) ? (theUserIdIs.id) : "",
+        userId: (theUserIdIs) ? (theUserIdIs.id) : "",
     }
 
 

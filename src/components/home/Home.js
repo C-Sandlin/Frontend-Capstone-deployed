@@ -132,8 +132,22 @@ class Home extends Component {
             .then(results => newState.allEntries = results)
 
             //Fetch locations from API, 
-            .then(() => API.hereMaps())
-            .then(results => newState.locationResults = results.results.items)
+            .then(() => {
+                if (navigator.geolocation) {
+                    return navigator.geolocation.getCurrentPosition(yourPosition => {
+                        let coords = yourPosition.coords;
+                        if (coords !== undefined) {
+                            API.hereMaps(coords.latitude, coords.longitude)
+                                .then(results => newState.locationResults = results.results.items)
+                        }
+                    })
+                }
+            })
+            // .then(coords => {
+            //     console.log("coords 2", coords)
+            //     API.hereMaps(coords.latitude, coords.longitude)
+            // })
+            // .then(results => newState.locationResults = results.results.items)
 
             //Fetch Logged Entries sorted by MoodCategoryId
             .then(() => API.getSpecificEntryCategory(5))
