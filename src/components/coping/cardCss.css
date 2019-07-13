@@ -227,6 +227,12 @@
     flex-direction: row;
   }
 
+  #cm-2-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
   #submit-cm-btn {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
@@ -245,6 +251,15 @@
     font-size: 1.3em;
     color: #D3524E;
     margin-left: 5rem;
+  }
+
+  #cancel-cm-btn {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3em;
+    color: rgb(194, 194, 194);
+    margin-left: 0rem;
   }
 
   .vote-text {

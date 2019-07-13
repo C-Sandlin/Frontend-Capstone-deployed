@@ -14,7 +14,6 @@ import Entries from '../entries/Entries'
 import { getUserFromLocalStorage, logout } from '../login/LoginHandler';
 import API from "../db/API";
 import moment from "moment";
-import * as emailjs from "emailjs-com"
 import { serviceId, userId, accessToken, templateId } from "../db/hiddenKey"
 
 
@@ -22,19 +21,14 @@ import { serviceId, userId, accessToken, templateId } from "../db/hiddenKey"
 class Home extends Component {
     state = {
         user: getUserFromLocalStorage(),
-        allCopingMechs: [],
-        greatCopingMechs: [],
-        goodCopingMechs: [],
-        okayCopingMechs: [],
-        notSoGreatCopingMechs: [],
-        badCopingMechs: [],
-        addModal: false,
+        moodCategoryId: "",
         copingLabel: "Select a mood category for this coping mechanism",
         addTitle: "",
         addUrl: "",
         addInfo: "",
         addInfo2: "",
         addCopingMoodCategoryId: "",
+        label: "I'm feeling...",
     }
 
     //ComponentDidMount - for when you want something to happen as soon as the DOM is rendered, and not before.
@@ -48,13 +42,6 @@ class Home extends Component {
             dropdownOpen: false,
             loader: false,
             check: false,
-            allCopingMechs: [],
-            greatCopingMechs: [],
-            goodCopingMechs: [],
-            okayCopingMechs: [],
-            notSoGreatCopingMechs: [],
-            badCopingMechs: [],
-            addModal: false,
             copingLabel: "Select a mood category for this coping mechanism",
             addTitle: "",
             addUrl: "",
@@ -63,36 +50,9 @@ class Home extends Component {
             addCopingMoodCategoryId: "",
         }
 
-
-        //Fetch coping mechs from local API. Put those returned promises into new state and set the state.
-
-        API.getSpecificCopingMech(5)
-            .then(greatCopingMechs => newState.greatCopingMechs = greatCopingMechs)
-            .then(() => API.getSpecificCopingMech(4))
-            .then(goodCopingMechs => newState.goodCopingMechs = goodCopingMechs)
-            .then(() => API.getSpecificCopingMech(3))
-            .then(okayCopingMechs => newState.okayCopingMechs = okayCopingMechs)
-            .then(() => API.getSpecificCopingMech(2))
-            .then(notSoGreatCopingMechs => newState.notSoGreatCopingMechs = notSoGreatCopingMechs)
-            .then(() => API.getSpecificCopingMech(1))
-            .then(badCopingMechs => newState.badCopingMechs = badCopingMechs)
-
-            //Fetch all coping mechs, put into state, and set state
-            .then(() => API.getAllCopingMechs())
-            .then(results => newState.allCopingMechs = results)
-
-
-
-            .then(() => this.setState(newState))
-
     }
 
     // All other functions to be passed down
-    toggleAddModal = () => {
-        this.setState(prevState => ({
-            addModal: !prevState.addModal
-        }));
-    }
 
     toggleExpansion = () => {
         this.setState({ showinfo: !this.state.showinfo })
@@ -134,6 +94,7 @@ class Home extends Component {
 
 
 
+
     logNewEntry = () => {
 
         this.setState({ loader: true })
@@ -169,47 +130,9 @@ class Home extends Component {
         this.setState({ dropdownOpen: !this.state.dropdownOpen });
     }
 
-    submitNewCmEntry = (value) => {
-        const newState = {
-            allCopingMechs: [],
-            addModal: false
-        }
-        const newObj = {
-            userId: this.state.user.id,
-            title: this.state.addTitle,
-            url: this.state.addUrl,
-            info: this.state.addInfo,
-            info2: this.state.addInfo2,
-            moodCategoryId: parseInt(this.state.addCopingMoodCategoryId),
-            score: 0
-        }
 
-        API.submitMech(newObj)
-            .then(() => API.getAllCopingMechs())
-            .then(copingMechs => newState.allCopingMechs = copingMechs)
-            .then(() => this.setState(newState))
 
-    }
 
-    // Fetch and get all coping mechanisms to display on the All coping mechanisms page
-    loadCms = () => {
-        const newState = {
-            allCopingMechs: []
-        }
-        API.getAllCopingMechs()
-            .then(copingMechs => newState.allCopingMechs = copingMechs)
-            .then(() => API.getSpecificCopingMech(5))
-            .then(greatCopingMechs => newState.greatCopingMechs = greatCopingMechs)
-            .then(() => API.getSpecificCopingMech(4))
-            .then(goodCopingMechs => newState.goodCopingMechs = goodCopingMechs)
-            .then(() => API.getSpecificCopingMech(3))
-            .then(okayCopingMechs => newState.okayCopingMechs = okayCopingMechs)
-            .then(() => API.getSpecificCopingMech(2))
-            .then(notSoGreatCopingMechs => newState.notSoGreatCopingMechs = notSoGreatCopingMechs)
-            .then(() => API.getSpecificCopingMech(1))
-            .then(badCopingMechs => newState.badCopingMechs = badCopingMechs)
-            .then(() => this.setState(newState))
-    }
 
 
     render() {
@@ -267,26 +190,21 @@ class Home extends Component {
                             <Coping
                                 {...props}
                                 {...this.props}
+                                user={this.state.user}
+                                addTitle={this.state.addTitle}
+                                addUrl={this.state.addUrl}
+                                addInfo={this.state.addInfo}
+                                addInfo2={this.state.addInfo2}
                                 moodCategoryId={this.state.moodCategoryId}
                                 onLogout={logout}
-                                greatCopingMechs={this.state.greatCopingMechs}
-                                goodCopingMechs={this.state.goodCopingMechs}
-                                okayCopingMechs={this.state.okayCopingMechs}
-                                notSoGreatCopingMechs={this.state.notSoGreatCopingMechs}
-                                badCopingMechs={this.state.badCopingMechs}
-                                allCopingMechs={this.state.allCopingMechs}
                                 toggleDropdown={this.toggleDropdown}
                                 dropdownOpen={this.state.dropdownOpen}
                                 handleFieldChange={this.handleFieldChange}
-                                toggleAddModal={this.toggleAddModal}
                                 toggleExpansion={this.toggleExpansion}
                                 selectMoodCat={this.selectMoodCat}
                                 editSelectMoodCat={this.editSelectMoodCat}
-                                submitNewCmEntry={this.submitNewCmEntry}
                                 copingLabel={this.state.copingLabel}
-                                addModal={this.state.addModal}
                                 editModal={this.state.editModal}
-                                loadCms={this.loadCms}
                                 showAllCards={this.showAllCards}
 
                             />

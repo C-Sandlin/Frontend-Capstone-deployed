@@ -18,6 +18,7 @@ export default class AllCmCard extends Component {
     state = {
         showinfo: false,
         editModal: false,
+        confirmModal: false,
         userId: theUserIdIs.id,
         editTitle: this.props.copingMechTitle,
         editUrl: this.props.copingMechUrl,
@@ -40,6 +41,12 @@ export default class AllCmCard extends Component {
     toggleEditModal = () => {
         this.setState(prevState => ({
             editModal: !prevState.editModal
+        }));
+    }
+
+    toggleConfirmModal = () => {
+        this.setState(prevState => ({
+            confirmModal: !prevState.confirmModal
         }));
     }
 
@@ -156,6 +163,15 @@ export default class AllCmCard extends Component {
                         </Form >
                         <div id="cm-btn-container">
                             <p id="submit-cm-btn" onClick={() => this.updateCmForm(this.props.copingMechId)}><FiCheck />  Submit</p>
+                            <p id="delete-cm-btn" onClick={this.toggleConfirmModal}><FiX />  Delete</p>
+                        </div>
+                    </ModalBody>
+                </Modal>
+                <Modal size="md" isOpen={this.state.confirmModal} className={this.props.className} toggle={this.toggleConfirmModal} centered={true}>
+                    <ModalBody>
+                        <p>Are you sure you want to delete this coping mechanism? Deletions are permanent.</p>
+                        <div id="cm-2-btn-container">
+                            <p id="cancel-cm-btn" style={{ color: 'grey' }} onClick={this.toggleConfirmModal}> Cancel</p>
                             <p id="delete-cm-btn" onClick={() => this.deleteCm(this.props.copingMechId)}><FiX />  Delete</p>
                         </div>
                     </ModalBody>

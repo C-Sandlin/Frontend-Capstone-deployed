@@ -18,19 +18,83 @@ export default class Coping extends Component {
 
     state = {
         userId: (theUserIdIs) ? (theUserIdIs.id) : "",
+        allCopingMechs: [],
+        greatCopingMechs: [],
+        goodCopingMechs: [],
+        okayCopingMechs: [],
+        notSoGreatCopingMechs: [],
+        badCopingMechs: [],
+        addModal: false,
     }
 
+    componentDidMount() {
+        this.loadCms()
+    }
 
+    toggleAddModal = () => {
+        this.setState(prevState => ({
+            addModal: !prevState.addModal
+        }));
+    }
+
+    loadCms = () => {
+        const newState = {
+            allCopingMechs: [],
+            greatCopingMechs: [],
+            goodCopingMechs: [],
+            okayCopingMechs: [],
+            notSoGreatCopingMechs: [],
+            badCopingMechs: [],
+        }
+
+        API.getAllCopingMechs()
+            .then(copingMechs => newState.allCopingMechs = copingMechs)
+            .then(() => API.getSpecificCopingMech(5))
+            .then(greatCopingMechs => newState.greatCopingMechs = greatCopingMechs)
+            .then(() => API.getSpecificCopingMech(4))
+            .then(goodCopingMechs => newState.goodCopingMechs = goodCopingMechs)
+            .then(() => API.getSpecificCopingMech(3))
+            .then(okayCopingMechs => newState.okayCopingMechs = okayCopingMechs)
+            .then(() => API.getSpecificCopingMech(2))
+            .then(notSoGreatCopingMechs => newState.notSoGreatCopingMechs = notSoGreatCopingMechs)
+            .then(() => API.getSpecificCopingMech(1))
+            .then(badCopingMechs => newState.badCopingMechs = badCopingMechs)
+            .then(() => this.setState(newState))
+    }
+
+    submitNewCmEntry = () => {
+        const newState = {
+            allCopingMechs: [],
+            addModal: false
+        }
+
+        const newObj = {
+            userId: this.props.user.id,
+            title: this.props.addTitle,
+            url: this.props.addUrl,
+            info: this.props.addInfo,
+            info2: this.props.addInfo2,
+            moodCategoryId: parseInt(this.props.addCopingMoodCategoryId),
+            score: 0
+        }
+
+
+        API.submitMech(newObj)
+            .then(() => API.getAllCopingMechs())
+            .then(copingMechs => newState.allCopingMechs = copingMechs)
+            .then(() => this.setState(newState))
+
+    }
 
     render() {
         return (
             <>
                 {
                     // Pulls up the "add new coping mech" entry form modal
-                    (this.props.moodCategoryId === "" || this.props.moodCategoryId === undefined) ? (<p onClick={this.props.toggleAddModal} className="add-new-cm"><FiPlus style={{ marginBottom: '4px' }} />  Add</p>) : null
+                    (this.props.moodCategoryId === "" || this.props.moodCategoryId === undefined) ? (<p onClick={this.toggleAddModal} className="add-new-cm"><FiPlus style={{ marginBottom: '4px' }} />  Add</p>) : null
                 }
                 {
-                    // Pulls up the "add new coping mech" entry form modal
+                    // shows all CM's
                     (this.props.moodCategoryId !== "") ? (<p onClick={this.props.showAllCards} className="add-new-cm"><FiGrid style={{ marginBottom: '4px' }} />  View All</p>) : null
                 }
 
@@ -38,31 +102,31 @@ export default class Coping extends Component {
 
                     {
                         (this.props.moodCategoryId === 5) ? (
-                            this.props.greatCopingMechs.map(copingMech => {
-                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                            this.state.greatCopingMechs.map(copingMech => {
+                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.loadCms} />
                             })
                         ) :
                             (this.props.moodCategoryId === 4) ? (
-                                this.props.goodCopingMechs.map(copingMech => {
-                                    return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                this.state.goodCopingMechs.map(copingMech => {
+                                    return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.loadCms} />
                                 })
                             ) :
                                 (this.props.moodCategoryId === 3) ? (
-                                    this.props.okayCopingMechs.map(copingMech => {
-                                        return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                    this.state.okayCopingMechs.map(copingMech => {
+                                        return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.loadCms} />
                                     })
                                 ) :
                                     (this.props.moodCategoryId === 2) ? (
-                                        this.props.notSoGreatCopingMechs.map(copingMech => {
-                                            return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                        this.state.notSoGreatCopingMechs.map(copingMech => {
+                                            return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.loadCms} />
                                         })
                                     ) :
                                         (this.props.moodCategoryId === 1) ? (
-                                            this.props.badCopingMechs.map(copingMech => {
-                                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                            this.state.badCopingMechs.map(copingMech => {
+                                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.loadCms} />
                                             })
                                         ) : (this.props.moodCategoryId === "" || this.props.moodCategoryId === undefined) ? (
-                                            this.props.allCopingMechs.map(copingMech => {
+                                            this.state.allCopingMechs.map(copingMech => {
                                                 return <AllCmCard
                                                     key={copingMech.id}
                                                     copingMechId={copingMech.id}
@@ -77,14 +141,14 @@ export default class Coping extends Component {
                                                     copingLabel={this.props.copingLabel}
                                                     dropdownOpen={this.props.dropdownOpen}
                                                     editCopingLabel={this.props.editCopingLabel}
-                                                    loadCms={this.props.loadCms}
+                                                    loadCms={this.loadCms}
                                                     copingMechScore={copingMech.score} />
                                             })
                                         ) : null
                     }
                 </Carousel>
-                <Modal size="lg" isOpen={this.props.addModal} toggle={this.toggleAddModal} className={this.props.className} centered={true}>
-                    <ModalHeader toggle={this.props.toggleAddModal}>
+                <Modal size="lg" isOpen={this.state.addModal} toggle={this.toggleAddModal} className={this.props.className} centered={true}>
+                    <ModalHeader toggle={this.toggleAddModal}>
                         Add New Coping Mechanism
                         </ModalHeader>
                     <ModalBody>
@@ -120,7 +184,7 @@ export default class Coping extends Component {
                         </Form >
                     </ModalBody>
                     <div id="cm-btn-container" style={{ marginBottom: '20px' }}>
-                        <p id="submit-cm-btn" onClick={this.props.submitNewCmEntry} style={{ marginLeft: '20px' }}><FiCheck />  Submit</p>
+                        <p id="submit-cm-btn" onClick={this.submitNewCmEntry} style={{ marginLeft: '20px' }}><FiCheck />  Submit</p>
                     </div>
 
                 </Modal>
