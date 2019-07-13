@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 import { FiChevronDown, FiCheck, FiInfo, FiMapPin } from "react-icons/fi";
 import FindHelp from "./FindHelp.css";
 import Map from "./Map";
+import API from "../db/API";
 
 
 
@@ -14,6 +15,7 @@ export default class Contact extends Component {
         collapse: false,
         modal: false,
         chevron: false,
+        locationResults: [],
     }
 
     toggleDrop = () => {
@@ -26,6 +28,21 @@ export default class Contact extends Component {
 
     componentDidMount() {
         console.log("findHelp is mounted")
+
+        //Fetch locations from API, 
+        if (navigator.geolocation) {
+            return navigator.geolocation.getCurrentPosition(yourPosition => {
+                let coords = yourPosition.coords;
+                if (coords !== undefined) {
+                    API.hereMaps(coords.latitude, coords.longitude)
+                        .then(results => {
+                            console.log(results);
+                            return results;
+                        })
+                        .then(results => this.setState({ locationResults: results.results.items }))
+                }
+            })
+        }
     }
 
 
@@ -82,7 +99,7 @@ export default class Contact extends Component {
                         Therapists Near Your Location
                     </ModalHeader>
                     <ModalBody>
-                        <Map locationResults={this.props.locationResults} />
+                        <Map locationResults={this.state.locationResults} />
                     </ModalBody>
                 </Modal>
             </>

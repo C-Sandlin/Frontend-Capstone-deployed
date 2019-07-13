@@ -18,12 +18,12 @@ import * as emailjs from "emailjs-com"
 import { serviceId, userId, accessToken, templateId } from "../db/hiddenKey"
 
 
-let greatArray;
-const greatOpt = [];
-const goodOpt = [];
-const okayOpt = [];
-const notSoGreatOpt = [];
-const badOpt = [];
+// let greatArray;
+// const greatOpt = [];
+// const goodOpt = [];
+// const okayOpt = [];
+// const notSoGreatOpt = [];
+// const badOpt = [];
 
 
 
@@ -87,7 +87,6 @@ class Home extends Component {
             addInfo2: "",
             addCopingMoodCategoryId: "",
             allEntries: [],
-            locationResults: [],
             cat5Entries: [],
             cat4Entries: [],
             cat3Entries: [],
@@ -131,23 +130,6 @@ class Home extends Component {
             .then(() => API.getAllEntries())
             .then(results => newState.allEntries = results)
 
-            //Fetch locations from API, 
-            .then(() => {
-                if (navigator.geolocation) {
-                    return navigator.geolocation.getCurrentPosition(yourPosition => {
-                        let coords = yourPosition.coords;
-                        if (coords !== undefined) {
-                            API.hereMaps(coords.latitude, coords.longitude)
-                                .then(results => newState.locationResults = results.results.items)
-                        }
-                    })
-                }
-            })
-            // .then(coords => {
-            //     console.log("coords 2", coords)
-            //     API.hereMaps(coords.latitude, coords.longitude)
-            // })
-            // .then(results => newState.locationResults = results.results.items)
 
             //Fetch Logged Entries sorted by MoodCategoryId
             .then(() => API.getSpecificEntryCategory(5))
