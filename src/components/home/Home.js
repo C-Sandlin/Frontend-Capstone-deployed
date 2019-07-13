@@ -30,12 +30,6 @@ import { serviceId, userId, accessToken, templateId } from "../db/hiddenKey"
 class Home extends Component {
     state = {
         user: getUserFromLocalStorage(),
-        greatMoods: [],
-        goodMoods: [],
-        okayMoods: [],
-        notSoGreatMoods: [],
-        badMoods: [],
-        moodOpts: [],
         allCopingMechs: [],
         greatCopingMechs: [],
         goodCopingMechs: [],
@@ -60,12 +54,6 @@ class Home extends Component {
     componentDidMount() {
         const newState = {
             user: getUserFromLocalStorage(),
-            greatMoods: [],
-            goodMoods: [],
-            okayMoods: [],
-            notSoGreatMoods: [],
-            badMoods: [],
-            moodOpts: [],
             moodCategoryId: "",
             selectedMood: "",
             description: "",
@@ -98,20 +86,10 @@ class Home extends Component {
             lineData: [],
         }
 
-        //Fetch moods from local API by specifying which category to fetch. Then, put those returned promises into new state, and finally setting the state.
-        API.getSpecificMood(5)
-            .then(greatmoods => newState.greatMoods = greatmoods)
-            .then(() => API.getSpecificMood(4))
-            .then(goodmoods => newState.goodMoods = goodmoods)
-            .then(() => API.getSpecificMood(3))
-            .then(okaymoods => newState.okayMoods = okaymoods)
-            .then(() => API.getSpecificMood(2))
-            .then(notsogreatmoods => newState.notSoGreatMoods = notsogreatmoods)
-            .then(() => API.getSpecificMood(1))
-            .then(badmoods => newState.badMoods = badmoods)
 
-            //Fetch coping mechs from local API. Put those returned promises into new state and set the state.
-            .then(() => API.getSpecificCopingMech(5))
+        //Fetch coping mechs from local API. Put those returned promises into new state and set the state.
+
+        API.getSpecificCopingMech(5)
             .then(greatCopingMechs => newState.greatCopingMechs = greatCopingMechs)
             .then(() => API.getSpecificCopingMech(4))
             .then(goodCopingMechs => newState.goodCopingMechs = goodCopingMechs)
@@ -443,11 +421,6 @@ class Home extends Component {
                             <NewRegulate
                                 {...props}
                                 {...this.props}
-                                greatMoods={this.state.greatMoods}
-                                goodMoods={this.state.goodMoods}
-                                okayMoods={this.state.okayMoods}
-                                notSoGreatMoods={this.state.notSoGreatMoods}
-                                badMoods={this.state.badMoods}
                                 user={this.state.user}
                                 logNewEntry={this.logNewEntry}
                                 select={this.select}
@@ -540,7 +513,6 @@ class Home extends Component {
                                 {...props}
                                 user={this.state.user}
                                 onLogout={logout}
-                                locationResults={this.state.locationResults}
                             />
                         </>)
                         : (<Redirect to="/login" />)

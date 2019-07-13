@@ -6,6 +6,7 @@ import { FiChevronDown, FiCheck } from "react-icons/fi";
 import { TiSocialTwitter } from "react-icons/ti"
 import Regulatecss from "./Regulate.css"
 import checkin from "../../checkin-15.svg"
+import API from "../db/API";
 
 
 
@@ -22,6 +23,29 @@ class NewRegulate extends Component {
         const date2 = date.toLocaleDateString()
         const timestamp = date.toLocaleTimeString()
         return `{date2}  at  {timestamp}`
+    }
+
+    componentDidMount() {
+        const newState = {
+            greatMoods: [],
+            goodMoods: [],
+            okayMoods: [],
+            notSoGreatMoods: [],
+            badMoods: [],
+        }
+
+        //Fetch moods from local API by specifying which category to fetch. Then, put those returned promises into new state, and finally setting the state.
+        API.getSpecificMood(5)
+            .then(greatmoods => newState.greatMoods = greatmoods)
+            .then(() => API.getSpecificMood(4))
+            .then(goodmoods => newState.goodMoods = goodmoods)
+            .then(() => API.getSpecificMood(3))
+            .then(okaymoods => newState.okayMoods = okaymoods)
+            .then(() => API.getSpecificMood(2))
+            .then(notsogreatmoods => newState.notSoGreatMoods = notsogreatmoods)
+            .then(() => API.getSpecificMood(1))
+            .then(badmoods => newState.badMoods = badmoods)
+            .then(() => this.setState(newState))
     }
 
     render() {
@@ -52,35 +76,35 @@ class NewRegulate extends Component {
                             }}>
                             <DropdownItem header>Great</DropdownItem>
                             {
-                                (this.props.greatMoods) ? (this.props.greatMoods.map(mood => {
+                                (this.state.greatMoods) ? (this.state.greatMoods.map(mood => {
                                     return <DropdownItem key={`${mood.id}--${mood.moodCategoryId}`} onClick={(e) => this.props.select(e, 5)} className="dropdown-item">{mood.name} </DropdownItem>
                                 })) : null
                             }
                             <DropdownItem divider style={{ borderColor: '#466E75' }} />
                             <DropdownItem header>Good</DropdownItem>
                             {
-                                (this.props.goodMoods) ? (this.props.goodMoods.map(mood => {
+                                (this.state.goodMoods) ? (this.state.goodMoods.map(mood => {
                                     return <DropdownItem key={mood.id} onClick={(e) => this.props.select(e, 4)}>{mood.name}</DropdownItem>
                                 })) : null
                             }
                             <DropdownItem divider style={{ borderColor: '#466E75' }} />
                             <DropdownItem header>Neutral</DropdownItem>
                             {
-                                (this.props.okayMoods) ? (this.props.okayMoods.map(mood => {
+                                (this.state.okayMoods) ? (this.state.okayMoods.map(mood => {
                                     return <DropdownItem key={mood.id} onClick={(e) => this.props.select(e, 3)} >{mood.name}</DropdownItem>
                                 })) : null
                             }
                             <DropdownItem divider style={{ borderColor: '#466E75' }} />
                             <DropdownItem header>Not Great</DropdownItem>
                             {
-                                (this.props.notSoGreatMoods) ? (this.props.notSoGreatMoods.map(mood => {
+                                (this.state.notSoGreatMoods) ? (this.state.notSoGreatMoods.map(mood => {
                                     return <DropdownItem key={mood.id} onClick={(e) => this.props.select(e, 2)} >{mood.name}</DropdownItem>
                                 })) : null
                             }
                             <DropdownItem divider style={{ borderColor: '#466E75' }} />
                             <DropdownItem header>Bad</DropdownItem>
                             {
-                                (this.props.badMoods) ? (this.props.badMoods.map(mood => {
+                                (this.state.badMoods) ? (this.state.badMoods.map(mood => {
                                     return <DropdownItem key={mood.id} onClick={(e) => this.props.select(e, 1)} >{mood.name}</DropdownItem>
                                 })) : null
                             }
