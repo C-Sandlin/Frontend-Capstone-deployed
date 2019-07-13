@@ -3,10 +3,14 @@ import EntryCss from "./EntryCss.css"
 import moment from "moment";
 import { FiClock, FiCalendar } from "react-icons/fi";
 import { MdBrightness1 } from "react-icons/md"
+import API from "../db/API";
 
 
 
 export default class Entries extends Component {
+    state = {
+        allEntries: []
+    }
 
     formatDate = (dateLogged) => {
         let month = moment(dateLogged).format("MMMM Do YYYY");
@@ -18,11 +22,21 @@ export default class Entries extends Component {
         return time
     }
 
+    componentDidMount() {
+        const newState = {
+            allEntries: []
+        }
+
+        API.getAllEntries()
+            .then(entries => newState.allEntries = entries)
+            .then(() => this.setState(newState));
+    }
+
     render() {
         return (
             <div className="entries-container">
                 {
-                    this.props.allEntries.map(entry => {
+                    this.state.allEntries.map(entry => {
                         return (
                             <div key={entry.id} className="entry-overall-container">
                                 <div className="entry-info-container">
