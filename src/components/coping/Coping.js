@@ -39,27 +39,27 @@ export default class Coping extends Component {
                     {
                         (this.props.moodCategoryId === 5) ? (
                             this.props.greatCopingMechs.map(copingMech => {
-                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} selectedMood={this.props.selectedMood} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
                             })
                         ) :
                             (this.props.moodCategoryId === 4) ? (
                                 this.props.goodCopingMechs.map(copingMech => {
-                                    return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} selectedMood={this.props.selectedMood} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                    return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
                                 })
                             ) :
                                 (this.props.moodCategoryId === 3) ? (
                                     this.props.okayCopingMechs.map(copingMech => {
-                                        return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} selectedMood={this.props.selectedMood} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                        return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
                                     })
                                 ) :
                                     (this.props.moodCategoryId === 2) ? (
                                         this.props.notSoGreatCopingMechs.map(copingMech => {
-                                            return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} selectedMood={this.props.selectedMood} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                            return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
                                         })
                                     ) :
                                         (this.props.moodCategoryId === 1) ? (
                                             this.props.badCopingMechs.map(copingMech => {
-                                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} selectedMood={this.props.selectedMood} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
+                                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.props.loadCms} />
                                             })
                                         ) : (this.props.moodCategoryId === "" || this.props.moodCategoryId === undefined) ? (
                                             this.props.allCopingMechs.map(copingMech => {
