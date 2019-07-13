@@ -40,7 +40,7 @@ export default class TopNav extends React.Component {
                     </div>
                     <NavLink to="/regulate/new" className="menuItem" activeClassName="currentLink" onClick={this.props.resetState}><FiSun style={{ marginRight: "10px", marginBottom: "5px" }} />Check in</NavLink>
                     <NavLink to="/entries" className="menuItem" activeClassName="currentLink"><FiBookOpen style={{ marginRight: "10px", marginBottom: "5px" }} />Logged Checkins</NavLink>
-                    <NavLink to="/coping" className="menuItem" activeClassName="currentLink"><FiShield style={{ marginRight: "10px", marginBottom: "5px" }} />My Toolbox</NavLink>
+                    <NavLink to="/coping" className="menuItem" activeClassName="currentLink" ><FiShield style={{ marginRight: "10px", marginBottom: "5px" }} />My Toolbox</NavLink>
                     <NavLink to="/stats" className="menuItem" activeClassName="currentLink"><FiBarChart2 style={{ marginRight: "10px", marginBottom: "5px" }} />Statistics</NavLink>
                     <NavLink to="/support" className="menuItem" activeClassName="currentLink"><FiSearch style={{ marginRight: "10px", marginBottom: "5px" }} />Support</NavLink>
                     {/* <NavLink to="/profile" className="menuItem" activeClassName="currentLink"><FiUser style={{ marginRight: "10px", marginBottom: "5px" }} />User Profile</NavLink> */}
