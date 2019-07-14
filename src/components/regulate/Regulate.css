@@ -5,7 +5,7 @@
     position: relative;
     display: block;
     width: 200px;
-    height: 45px;
+    min-height: 45px;
     border-radius: 40px;
     background-color: #2A404A;
     border: solid 1px transparent;
@@ -28,6 +28,8 @@
     transition: all .1s ease-in-out;
     color: rgb(56, 86, 100);
   }
+
+
   
   
   .loader {
@@ -158,17 +160,19 @@ button.dropdown-item.dropdown-item {
 }
 
 #home-logo {
-  width: 25vw;
+  width: 40vw;
   margin-top: 30vh;
-  margin-left: 10px;
 }
 
-/* .home-tagline {
-  margin-top: 0px;
-  font-size: 1.1em;
-  margin-left: 120px;
-  
-} */
+@media screen and (min-width: 48em) {
+  #home-logo {
+    width: 25vw;
+    margin-top: 30vh;
+    margin-left: 10px;
+  }
+}
+
+
 
 input.colin-input {
   width: 30vw;
