@@ -147,8 +147,9 @@ body > #root {
     right: 36px;
     top: 15px;
     color: #2A4D59;
-    z-index:  1050;
+    z-index:  3050;
     box-shadow: none;
+    /* transform: translateX(-180px); */
   }
 
 
@@ -209,7 +210,12 @@ body > #root {
   }
 
   /* WORKING HERE */
+
+
   @media screen and (min-width: 48em) {
+
+ 
+
     .bm-menu {
       font-size: 1.15em;
     }
@@ -234,6 +240,7 @@ body > #root {
 
   @media screen and (min-width: 60em) {
     
+  
 
     .bm-item-list {
       line-height: 2em;

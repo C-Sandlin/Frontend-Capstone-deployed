@@ -2,14 +2,16 @@
     background-color: white;
     display: flex;
     flex-direction: Column;
-    margin: 20px 20px 20px 0px;
-    margin-left: 20px;
-    width: 45em;
+    margin: 0rem;
+    margin-bottom: 10px;
+    /* margin-left: 20px; */
+    width: 90vw;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
     transition: all .2s ease-in-out;
 }
+
 
 .entry-overall-container:hover {
     transform: scale(1.05);
@@ -18,11 +20,11 @@
 .entry-info-container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: .9rem;
 }
 
 .entry-mood-category {
-    font-size: 1em;
+    font-size: .8rem;
     /* text-transform: uppercase; */
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
@@ -35,22 +37,36 @@
 
 .entry-date-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #4F6D74;
     justify-content: space-between;
     align-items: center;
 }
 
+.entry-mood-container{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.entry-datetime-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .entry-date-day{
-    font-size: 1em;
+    font-size: .8rem;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
     font-style: normal;
     color: #fff;
     margin: 0;
+    margin-left: 10px;
+    padding: 5px;
 }
 .entry-date-time{
-    font-size: 1em;
+    font-size: .8rem;
     text-transform: uppercase;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
@@ -58,14 +74,16 @@
     color: #fff;
     margin: 0;
     margin-right: 30px;
+    margin-left: 10px;
+    padding: 5px;
 }
   
 .entry-entry-container{
     display: flex;
     flex-direction: column;
 }
-.entry-mood{
-    font-size: 1.75em;
+.entry-mood {
+    font-size: 1.25rem;
     font-family: granville, serif;
     font-weight: 700;
     font-style: normal;
@@ -73,7 +91,7 @@
     margin-bottom: 0px;
 }
 .entry-text{
-    font-size: 1.3em;
+    font-size: 1rem;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -102,5 +120,88 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
+}
+
+/* 
+
+MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES
+MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES
+MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES
+
+*/
+
+@media screen and (min-width: 48em) {
+    .entry-overall-container {
+        width: 70vw;
+        margin-bottom: 20px;
+    }
+
+    .entry-info-container {
+        padding: 20px;
+    }
+
+    .entry-date-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .entry-mood-container{
+        flex: 1;
+    }
+    
+    .entry-datetime-container {
+        flex: 2;
+    }
+
+    .entries-container {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .entry-overall-container {
+        width: 55vw;
+    }
+
+    .entry-date-time {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 90em) {
+    .entry-overall-container {
+        width: 45em;
+        margin: 20px 20px 20px 0px;
+        margin-left: 20px;
+    }
+
+    .entry-mood{
+        font-size: 1.75em;
+    }
+
+    .entry-text{
+        font-size: 1.3em;
+    }
+
+    .entries-container {
+        margin-top: 30px;
+    }
+
+    .entry-mood-category {
+        font-size: 1em;
+    }
+
+    .entry-date-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .entry-date-day {
+        font-size: 1em;
+    }
+
+    .entry-date-time {
+        font-size: 1em;
+    }
 }
