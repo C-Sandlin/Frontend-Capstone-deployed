@@ -4,11 +4,15 @@
     justify-content: space-between;
 }
 
+.safetyplan-title-container > svg {
+    margin-top: -4px;
+}
+
 .safetyplan-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 30vw;
+    width: 85vw;
     margin: auto;
     padding: 12px 12px 4px 12px;
     border: 1px solid #2A404A;
@@ -17,8 +21,12 @@
 }
 
 #map {
-    height: 700px;
-  }
+    height: 70vh;
+}
+
+div#collapse {
+    padding: 3px;
+}
 
 
 #collapse-container #collapse {
@@ -48,13 +56,14 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 1.2rem;
 }
 
 .safety-plan-subhead {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 .findhelp-main {
@@ -66,3 +75,38 @@ body {
 .findhelp-main > button {
     margin-top: 30px;
 }
+
+.map-title {
+    font-size: 1.25rem;
+}
+
+@media screen and (min-width: 48em) {
+    .safety-plan-subhead {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.25em;
+    }
+
+    #map {
+        height: 50vh;
+    }
+
+    .safetyplan-container {
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .safetyplan-container {
+        width: 40vw;
+    }
+}
+
+@media screen and (min-wdith: 90em) {
+
+    #map {
+        height: 700px;
+    }
+}
+
