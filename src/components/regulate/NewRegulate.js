@@ -56,8 +56,8 @@ class NewRegulate extends Component {
             <>
                 <div className="main-container">
                     <img id="checkin-logo" src={checkin} alt="regulate-logo"></img>
-                    <Dropdown isOpen={this.props.dropdownOpen} toggle={this.props.toggleDropdown} className="dropdown-container" style={{ marginTop: '20vh' }} >
-                        <DropdownToggle className="regulate-dropdown" style={{ display: 'flex', color: "#4F6D74", flexDirection: 'row', backgroundColor: 'transparent', padding: '10px', width: '30vw', justifySelf: 'center', margin: 'auto', marginTop: '30px', border: '1px solid #4F6D74' }}>
+                    <Dropdown isOpen={this.props.dropdownOpen} toggle={this.props.toggleDropdown} className="dropdown-container" >
+                        <DropdownToggle className="regulate-dropdown" style={{ backgroundColor: 'transparent' }}>
                             <div className="button-container">
                                 <div style={{ justifySelf: 'flex-start' }}>
                                     <p id="dropdown-lable">{this.props.label}</p>
@@ -72,7 +72,7 @@ class NewRegulate extends Component {
                             id="dropdown-menu"
                             right={true}
                             modifiers={{
-                                setMaxHeight: { enabled: true, order: 890, fn: (data) => { return { ...data, styles: { ...data.styles, overflow: 'auto', maxHeight: 300 }, }; }, },
+                                setMaxHeight: { enabled: true, order: 890, fn: (data) => { return { ...data, styles: { ...data.styles, overflow: 'auto', maxHeight: 200 }, }; }, },
                             }}>
                             <DropdownItem header>Great</DropdownItem>
                             {

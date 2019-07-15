@@ -61,7 +61,7 @@ body > #root {
   justify-content: center;
   /* justify-content: center;
   align-items: center; */
-  height: 60vh;
+  height: 90vh;
 }
 
 .colin-button {
@@ -207,6 +207,7 @@ body > #root {
     flex-direction: 'column';
   }
 
+  /* WORKING HERE */
   @media screen and (min-width: 48em) {
     .bm-menu {
       font-size: 1.15em;
@@ -231,12 +232,10 @@ body > #root {
   }
 
   @media screen and (min-width: 60em) {
-    .bm-menu {
-      font-size: 1.5em;
-    }
+    
 
     .bm-item-list {
-      line-height: 3em;
+      line-height: 2em;
     }
     
     .bm-item:nth-child(1),  .bm-item:nth-child(2) {
@@ -251,6 +250,12 @@ body > #root {
       margin: auto;
   }
     
+  }
+
+  @media screen and (min-width: 90em) {
+    .bm-item-list {
+      line-height: 3em;
+    }
   }
   
   
