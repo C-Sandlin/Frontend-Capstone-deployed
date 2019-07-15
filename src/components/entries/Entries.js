@@ -46,9 +46,16 @@ export default class Entries extends Component {
                                     </div>
                                 </div>
                                 <div className="entry-date-container">
-                                    <p className="entry-mood-category"><MdBrightness1 style={(entry.moodCategoryId === 5) ? ({ color: '#E4E4E4', margin: '5px', marginBottom: '8px' }) : (entry.moodCategoryId === 4) ? ({ color: '#BADED2', margin: '5px', marginBottom: '8px' }) : (entry.moodCategoryId === 3) ? ({ color: '#F4D28E', margin: '5px', marginBottom: '8px' }) : (entry.moodCategoryId === 2) ? ({ color: '#ECAEA3', margin: '5px', marginBottom: '8px' }) : (entry.moodCategoryId === 1) ? ({ color: '#D3524E', margin: '5px', marginBottom: '8px' }) : ("")} /> Mood Category: {
-                                        (entry.moodCategoryId === 5) ? ("Great") : (entry.moodCategoryId === 4) ? ("Good") : (entry.moodCategoryId === 3) ? ("Neutral") : (entry.moodCategoryId === 2) ? ("Not Great") : (entry.moodCategoryId === 1) ? ("Bad") : ("")
-                                    }</p>
+                                    <p className="entry-mood-category"><MdBrightness1
+                                        style={(entry.moodCategoryId === 5) ? ({ color: '#55CEB7', margin: '5px', marginBottom: '8px' }) :
+                                            (entry.moodCategoryId === 4) ? ({ color: '#BADED2', margin: '5px', marginBottom: '8px' }) :
+                                                (entry.moodCategoryId === 3) ? ({ color: '#F4D28E', margin: '5px', marginBottom: '8px' }) :
+                                                    (entry.moodCategoryId === 2) ? ({ color: '#ECAEA3', margin: '5px', marginBottom: '8px' }) : (entry.moodCategoryId === 1) ? ({ color: '#D3524E', margin: '5px', marginBottom: '8px' }) :
+                                                        ("")} />
+
+                                        Mood Category: {
+                                            (entry.moodCategoryId === 5) ? ("Great") : (entry.moodCategoryId === 4) ? ("Good") : (entry.moodCategoryId === 3) ? ("Neutral") : (entry.moodCategoryId === 2) ? ("Not Great") : (entry.moodCategoryId === 1) ? ("Bad") : ("")
+                                        }</p>
                                     <p className="entry-date-day"><FiCalendar style={{ margin: '5px', marginBottom: '8px' }} />{this.formatDate(entry.dateLogged)}</p>
                                     <p className="entry-date-time"><FiClock style={{ margin: '5px', marginBottom: '8px' }} />{this.formatTime(entry.dateLogged)}</p>
                                 </div>

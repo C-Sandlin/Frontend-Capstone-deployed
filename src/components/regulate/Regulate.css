@@ -333,3 +333,10 @@ input.colin-input {
   
 
 }
+
+
+button:focus {
+  outline-color: transparent;
+  outline-style: none;
+  outline: none;
+}
