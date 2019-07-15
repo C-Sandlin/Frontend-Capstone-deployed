@@ -4,13 +4,13 @@
 .button {
     position: relative;
     display: block;
-    width: 200px;
-    height: 45px;
+    width: 150px;
+    min-height: 35px;
     border-radius: 40px;
     background-color: #2A404A;
     border: solid 1px transparent;
     color: #fff;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 300;
     cursor: pointer;
     transition: all .1s ease-in-out;
@@ -21,6 +21,14 @@
     font-style: normal;
     letter-spacing: .05em;
   }
+
+  @media screen and (min-width: 48em) {
+    .button {
+      width: 200px;
+      min-height: 45px;
+      font-size: 18px;
+    }
+  }
   
   .button:hover {
     background-color: transparent;
@@ -28,6 +36,8 @@
     transition: all .1s ease-in-out;
     color: rgb(56, 86, 100);
   }
+
+
   
   
   .loader {
@@ -129,27 +139,36 @@ h2.colin-heading {
 #dropdown-menu {
   background-color: #D1E8E0;
   border: none;
-  margin-left: 34.7vw;
+  margin-left: 0vw;
   border-radius: none;
-  width: 30.2vw;
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 5px;
   overflow-x: hidden;
 }
 
+.dropdown-container.dropdown {
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 85vw;
+}
+
 button.dropdown-item.dropdown-item {
-  margin-top: 7px;
-  margin-left: 8px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 #dropdown-lable {
   margin-top: 7px;
   margin-left: 8px;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: .9rem;
 }
 
 .colin-input {
   color: #2A404A;
+  font-size: .9rem;
+  margin-bottom: 40px;
 }
 
 .greeting {
@@ -158,31 +177,159 @@ button.dropdown-item.dropdown-item {
 }
 
 #home-logo {
-  width: 25vw;
+  width: 70vw;
   margin-top: 30vh;
-  margin-left: 10px;
 }
 
-/* .home-tagline {
-  margin-top: 0px;
-  font-size: 1.1em;
-  margin-left: 120px;
-  
-} */
+#checkin-logo {
+  width: 40vw;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
 
 input.colin-input {
-  width: 30vw;
+  width: 85vw;
   border: 1px solid rgb(79, 109, 116);
   padding: 15px;
   border-radius: 4px;
 }
 
-#checkin-logo {
-  width: 10vw;
-  margin: auto;
-  transform: translateY(225px)
-}
 
 #newreg-btn {
   margin-top: 20px;
+}
+
+.regulate-dropdown {
+  display: flex;
+  color: #4F6D74;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  justify-self: center;
+  margin: auto;
+  margin-top: 30px;
+  border: 1px solid #4F6D74; 
+}
+
+
+@media screen and (min-width: 48em) {
+  #home-logo {
+    width: 45vw;
+    margin-left: 10px;
+  }
+
+  #checkin-logo {
+    width: 25vw;
+  }
+
+  input.colin-input {
+    width: 60vw;
+    padding: 15px;
+  }
+
+
+  button.dropdown-item.dropdown-item {
+    margin-top: 7px;
+    margin-left: 8px;
+  }
+
+  #dropdown-lable {
+    margin-top: 7px;
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+
+  .dropdown-container.dropdown {
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 60vw;
+  }
+
+  .colin-input {
+    font-size: 1rem;
+  }
+
+  .regulate-dropdown {
+    width: 60vw;
+  }
+
+}
+
+@media screen and (min-width: 60em) {
+  #home-logo {
+    width: 35vw;
+  }
+
+  #checkin-logo {
+    width: 20vw;
+  }
+
+  #dropdown-menu {
+    background-color: #D1E8E0;
+    border: none;
+    margin-left: 5vw;
+    border-radius: none;
+    width: 40vw;
+    margin-top: 10px;
+    overflow-x: hidden;
+  }
+
+  button.dropdown-item.dropdown-item {
+    margin-top: 7px;
+    margin-left: 8px;
+  }
+
+  #dropdown-lable {
+    margin-top: 7px;
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+
+  .dropdown-container.dropdown {
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 40vw;
+  }
+
+  .colin-input {
+    font-size: 1rem;
+  }
+
+  .regulate-dropdown {
+    width: 40vw;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  input.colin-input {
+    width: 40vw;
+    padding: 15px;
+  }
+
+
+}
+
+@media screen and (min-width: 90em) {
+  #home-logo {
+    width: 25vw;
+    margin-top: 35vh;
+  }
+
+  #checkin-logo {
+    width: 15vw;
+  }
+
+  /* #dropdown-menu {
+    width: 40vw;
+  } */
+
+  
+
 }

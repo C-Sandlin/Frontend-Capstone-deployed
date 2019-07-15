@@ -1,12 +1,37 @@
 form.ui.form.login-form {
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    padding: 30px;
-    width: 30vw;
-    height: 60vh;
+    width: 85vw;
+    /* height: 60vh; */
     align-items: center;
-    margin-top: 25vh;
+    margin-top: 10vh;
+}
+
+form.ui.form.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+form.ui.form.register-form .field:nth-child(2) {
+    margin-top: 5vh;
+}
+
+
+form.ui.form.register-form button.ui.button {
+    margin-top: 8.5vh;
+}
+
+#login-logo, #reg-logo {
+    height: 50px;
+    width: auto;
+ }
+
+ button.ui.button {
+    margin-top: 15vh;
+    margin-bottom: 10px;
 }
 
 .field {
@@ -20,12 +45,117 @@ form.ui.form.login-form {
     font-style: normal;
 }
 
+.field label {
+    font-size: .9rem;
+}
+
 .field:last-child {
    margin-top: 20px;
 }
 
 .field:nth-child(2) {
-    margin-top: 50px;
+    margin-top: 15vh;
+}
+
+.ui.message.auth--message, .ui.message.auth-message {
+    margin-top: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #2a404a;
+    font-size: .9rem;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+
+@media screen and (min-width: 48em) {
+    form.ui.form.login-form {
+        padding: 30px;
+        width: 60vw;
+        height: 60vh;
+        margin-top: 25vh;
+    }
+
+    form.ui.form.register-form {
+        padding: 30px;
+        width: 60vw;
+        height: 60vh;
+        margin-top: 25vh;
+    }
+
+    #login-logo, #reg-logo {
+        height: 60px;
+        width: auto;
+     }
+
+     button.ui.button {
+        margin-top: 12vh;
+        margin-bottom: 10px;
+    }
+
+    .field {
+        margin-top: 20px;
+    }
+
+    .field label {
+        font-size: 1rem;
+    }
+
+    .field:nth-child(2) {
+        margin-top: 10vh;
+    }
+
+    form.ui.form.register-form button.ui.button {
+        margin-top: 10vh;
+    }
+
+    .ui.message.auth--message, .ui.message.auth-message {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    
+    form.ui.form.login-form {
+        width: 50vw;
+        margin-top: 15vh;
+    }
+
+    form.ui.form.register-form {
+        width: 50vw;
+        margin-top: 15vh;
+    }
+
+    form.ui.form.login-form button.ui.button {
+        margin-top: 15vh;
+        margin-bottom: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 90em) {
+    
+    form.ui.form.login-form {
+        width: 40vw;
+        margin-top: 15vh;
+    }
+
+    form.ui.form.register-form {
+        width: 40vw;
+        margin-top: 15vh;
+    }
+
+    form.ui.form.login-form button.ui.button {
+        margin-top: 15vh;
+        margin-bottom: 10px;
+    }
+    
 }
 
 input[type="email"] {
@@ -62,45 +192,4 @@ input[type="text"] {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
     font-style: normal;
-}
-
-#login-logo, #reg-logo {
-    height: 60px;
-    width: auto;
- }
-
-button.ui.button {
-    margin-top: 80px;
-    margin-bottom: 10px;
-}
-
-.ui.message.auth--message, .ui.message.auth-message {
-    margin-top: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: #2a404a;
-}
-
-.auth-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 100vh;
-}
-
-form.ui.form.register-form {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    padding: 30px;
-    width: 30vw;
-    height: 55vh;
-    align-items: center;
-    margin-top: 25vh;
-}
-
-
-form.ui.form.register-form button.ui.button {
-    margin-top: 60px;
 }
