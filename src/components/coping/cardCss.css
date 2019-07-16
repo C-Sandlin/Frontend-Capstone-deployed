@@ -371,10 +371,45 @@ MEDIA QUERIES
     margin-left: 30px;
     margin-bottom: 40px !important;
   }
+  @media screen and (min-height: 85em) {
+    
+    article.card:hover .infos {
+      transform: translateY(-350px);
+    }
+
+    article.card {
+      width: 70vw;
+    }
+
+    article.card .infos .subtitle, article.card .infos .subtitle2 {
+      font-size: 1.7rem;
+    }
+  
+    article.card .infos .txt, article.card .infos .txt2 {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+  
+    article.card .infos .double-click-message {
+      font-size: 1.25rem;
+    }
+
+    article.card .infos .cm-score {
+      bottom: 650px;
+    }
+
+    .vote-button, .vote-text {
+      font-size: 1.5rem;
+    }
+  }
 
 }
 
 @media screen and (min-width: 90em) {
+
+  article.card {
+    width: 50vw;
+  }
 
   article.card:hover .infos {
     transform: translateY(-300px);
@@ -395,5 +430,32 @@ MEDIA QUERIES
     margin-bottom: 0;
   }
 
+  article.card .thumb {
+    background-size: contain;
+    width: 110%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+}
+
+@media screen and (min-width: 120em) {
+  
+  article.card {
+    width: 40vw;
+  }
+
+  article.card .thumb {
+    background-size: contain;
+    width: 130%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+  }
 
 }
