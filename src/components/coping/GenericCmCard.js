@@ -43,9 +43,9 @@ export default class BadCmCard extends Component {
             <article key={this.props.copingMechId} className="card">
                 <div className="thumb" style={{ backgroundImage: `url(${this.props.copingMechUrl})` }}></div>
                 <div className="infos">
-                    <h2 className="title">{this.props.copingMechTitle}</h2>
-                    <h3 className="date">{this.props.copingMechInfo}</h3>
-                    <p className="txt">{this.props.copingMechInfo2}</p>
+                    {/* <h2 className="title">{this.props.copingMechTitle}</h2> */}
+                    <h3 className="subtitle2">{this.props.copingMechInfo}</h3>
+                    <p className="txt2">{this.props.copingMechInfo2}</p>
                     <div className="cm-score">
                         <IconContext.Provider value={{ size: '1.25em' }} >
                             <button className="vote-button" disabled={this.state.upvote} onClick={() => this.upVote(this.props.copingMechId)} ><FiArrowUpCircle /></button>

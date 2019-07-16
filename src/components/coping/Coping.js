@@ -103,7 +103,8 @@ export default class Coping extends Component {
                     {
                         (this.props.moodCategoryId === 5) ? (
                             this.state.greatCopingMechs.map(copingMech => {
-                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.loadCms} />
+                                return <GenericCmCard key={copingMech.id} copingMechId={copingMech.id} copingMechUrl={copingMech.url} copingMechTitle={copingMech.title} copingMechInfo={copingMech.info} copingMechInfo2={copingMech.info2} copingMechScore={copingMech.score} loadCms={this.loadCms}
+                                />
                             })
                         ) :
                             (this.props.moodCategoryId === 4) ? (
@@ -142,7 +143,8 @@ export default class Coping extends Component {
                                                     dropdownOpen={this.props.dropdownOpen}
                                                     editCopingLabel={this.props.editCopingLabel}
                                                     loadCms={this.loadCms}
-                                                    copingMechScore={copingMech.score} />
+                                                    copingMechScore={copingMech.score}
+                                                    style={{ height: '80%' }} />
                                             })
                                         ) : null
                     }
@@ -183,7 +185,7 @@ export default class Coping extends Component {
                             </FormGroup>
                         </Form >
                     </ModalBody>
-                    <div id="cm-btn-container" style={{ marginBottom: '20px' }}>
+                    <div id="cm-add-btn-container" style={{ marginBottom: '20px' }}>
                         <p id="submit-cm-btn" onClick={this.submitNewCmEntry} style={{ marginLeft: '20px' }}><FiCheck />  Submit</p>
                     </div>
 
