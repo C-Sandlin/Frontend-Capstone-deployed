@@ -335,8 +335,26 @@ input.colin-input {
 }
 
 
-button:focus {
-  outline-color: transparent;
-  outline-style: none;
-  outline: none;
+@media screen and (min-width: 120em) {
+  #checkin-logo {
+    width: 12vw;
+  }
+
+  #dropdown-menu {
+    width: 30vw;
+  }
+
+  .dropdown-container.dropdown {
+    width: 30vw;
+  }
+
+  .regulate-dropdown {
+    width: 30vw;
+    margin: auto;
+  }
+
+  input.colin-input {
+    width: 30vw;
+    padding: 15px;
+  }
 }

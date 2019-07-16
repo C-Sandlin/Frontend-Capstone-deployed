@@ -91,6 +91,7 @@ export default class Contact extends Component {
                 <Modal size="lg"
                     isOpen={this.state.modal}
                     toggle={this.toggleModal}
+                    id={"mapModal"}
                     className={[this.props.className, "mapModal"].join(',')}
                     centered={true}
                     style={{ objectFit: "contain", overflow: "hidden" }}

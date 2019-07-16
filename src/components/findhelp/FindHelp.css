@@ -20,6 +20,10 @@
     margin-top: 5vh;
 }
 
+#mapModal .modal-body {
+    padding: 0px !important;
+}
+
 #map {
     height: 70vh;
 }

@@ -6,10 +6,10 @@
 }
 .quick-hits-container {
     display: flex;
-    flex-direction: row;
-    width: 30vw;
+    flex-direction: column;
+    width: 90vw;
     margin: auto;
-    margin-top: 5vh;
+    margin-top: 2.5vh;
     justify-content: center;
     background-color: #D1E8E0;
     border-radius: 5px;
@@ -18,21 +18,27 @@
 
 .quick-hit {
     display: flex;
-    flex-direction: column;
-    margin: 20px;
-    padding: 10px;
-    width: 200px;
-    height: 150px;
-    flex: 1;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
+    flex-direction: row;
+    padding-left: 12px;
+    padding-top: 5px;
+    /* margin: 20px; */
+    width: 100%;
+    /* height: 150px; */
+    /* flex: 1; */
+    /* justify-content: center;
+    align-content: baseline;
+    text-align: center; */
+}
+
+.quick-hit:nth-child(1), .quick-hit:nth-child(3) {
+    border-bottom: 1px solid rgba(187, 187, 187, 0.509);
 }
 
 .stats-divider {
     width: 1px;
     margin: 20px 0;
     background: rgb(169, 169, 169);
+    display: none;
 }
 
 .stat-number {
@@ -40,8 +46,17 @@
     font-weight: 300;
     font-style: normal;
     color: rgb(75, 111, 128);
-    font-size: 5em;
+    font-size: 2.5em;
     letter-spacing: .1em;
+    flex: 1;
+    margin: 0px;
+}
+
+.quick-hit > p {
+    font-size: 1rem;
+    flex: 2;
+    align-self: center;
+    margin-bottom: 0px;
 }
 
 /* .donut-container {
@@ -70,40 +85,53 @@
 } */
 
 .stats-card {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     display: flex;
     flex-direction: column;
     object-fit: contain;
     overflow: hidden;
-    width: 60vw;
+    width: 90vw;
     height: 100%;
     background-color: #D1E8E0;
     border-radius: 5px;
     margin: auto;
-    padding: 30px;
+    
     justify-content: center;
     align-content: center;
     text-align: center;
 }
 
+.stats-card > h2 {
+    font-size: 1rem;
+}
+
 .carousel-container {
-    height: 70vh;
-    padding: 40px;
+   /* width: 90vw; */
+   margin: 0px;
+   height: 60vh;
+    /* padding: 40px; */
+    padding-top: 2.5vh;
 }
 
 canvas.chartjs-render-monitor {
-    width: 1100px !important;
-    height: auto !important;
+    width: 300 !important;
+    height: 300 !important;
     margin: auto;
 }
 
-#donut-chart {
+/* #donut-chart {
     width: 580px !important;
     height: auto !important;
     
     margin-top: 40px;
     margin-bottom: 0px; 
+} */
+
+canvas#donut-chart {
+    width: 240px !important;
+    height: 220px !important;
 }
+
 
 button:focus {
     outline-color: transparent;
