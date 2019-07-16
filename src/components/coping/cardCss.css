@@ -1,303 +1,242 @@
+.vote-button, .vote-text {
+  color: #9AC4BB;
+  margin-bottom: 0px;
+}
 
-  * {
-    box-sizing: border-box;
-  }
-  html, body {
-    font-size: 100%;
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    background: #152536;
-  }
+.vote-text {
+  margin-top: 5px;
+}
 
-  article.card {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    left: 50%;
-    width: 40vw;
-    height: 70vh;
-    transform: translate(-50%, -50%) translateZ(0);
-    border-radius: 10px;
-    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
-    overflow: hidden;
-    margin-bottom: 0;
-  }
-  article.card .thumb {
-    width: auto;
-    min-height: 750px;
-   
-    background-size: cover;
-    border-radius: 3px;
-  }
-  article.card .infos {
-    width: auto;
-    height: 600px;
-    position: relative;
-    padding: 14px 65px;
-    background: #2A404A;
-    transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
-  }
-  article.card .infos .title {
-    position: relative;
-    margin: 10px 0;
-    color: #2A404A;
-    font-family: utopia-std-headline, serif;
-    font-size: 2.25rem;
-  }
-  article.card .infos .flag {
-    color: rgb(181, 181, 181);
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 35px;
-    height: 23px;
-    background-size: 100% auto;
-    display: inline-block;
-  }
-  article.card .infos .date, article.card .infos .seats {
-    margin-bottom: 10px;
-    /* text-transform: uppercase; */
-    font-size: 1.75em;
-    color: #9AC4BB;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    /* letter-spacing: .05em; */
-  }
-  article.card .infos .seats {
-    display: inline-block;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-    opacity: 0;
-    transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
-  }
-  article.card .infos .txt {
-    font-family: 'Merriweather', sans-serif;
-    line-height: 1.5;
-    font-size: 1.25em;
-    color: rgb(82, 106, 117);
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    opacity: 0;
-    transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
-  }
-  article.card .infos .details {
-    position: absolute;
-    left: 0;
-    left: 0;
-    bottom: 0;
-    margin: 10px 0;
-    padding: 20px 24px;
-    letter-spacing: 1px;
-    color: #4e958b;
-    font-family: 'Grotesque Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    opacity: 0;
-    transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
-  }
+.add-new-cm {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  article.card .infos .double-click-message {
-    opacity: 0;
-    transform: translateY(-50px);
-    color: rgba(255, 255, 255, 0.8);
-    transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
-  }
+article.card {
+  width: 90vw;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 72vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-  article.card:hover .infos .double-click-message {
-    color: rgba(109, 109, 109, 0.961);
-    opacity: 1;
-  }
+article.card .thumb {
+  background-size: contain;
+  width: 110%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+}
+
+article.card .infos {
+  background-color: #2A404A;
+  position: relative;
+  transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  opacity: 0;
+  padding: 12px;
+  min-height: 100%;
+}
+
+article.card .infos .subtitle {
+  color: #9AC4BB;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transform: translateY(-30px);
+  margin-top: 0px;
+}
+
+article.card .infos .subtitle2 {
+  color: #9AC4BB;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transform: translateY(0px);
+  margin-top: 0px;
+}
+
+article.card .infos .txt {
+  color: rgb(109, 136, 148);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  transform: translateY(-30px);
+}
+
+article.card .infos .txt2 {
+  color: rgb(109, 136, 148);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  transform: translateY(0px);
+}
+
+article.card .infos .cm-score {
+  transform: translateY(-15px);
+  position: absolute;
+  bottom: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: first baseline;
+}
+
+
+article.card .infos .double-click-message {
+  opacity: 0;
+  font-size: .8rem;
+  transform: translateY(-30px);
+  color: grey;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+article.card:hover .infos {
+  transform: translateY(-200px);
+}
+
+article.card:hover .infos, 
+article.card:hover .double-click-message
+{
+  opacity: 1;
+}
+
+/* 
+
+MODAL STYLING 
+MODAL STYLING 
+MODAL STYLING 
+MODAL STYLING
+
+*/
+
+.modal-content {
+  border-radius: 5px !important;
+  border: 1px solid transparent !important;
+}
+.modal-header {
+  background-color: #2A404A;
+  margin-top: -1px !important;
+  border-bottom: none !important;
+}
+
+h5.modal-title {
+  color: white;
+  font-size: 1rem;
+}
+
+button.close {
+  color: white;
+  text-shadow: none !important;
+}
+
+.modal-body label {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #2A404A;
+}
+
+.modal-body input {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: .9rem;
+}
+
+.modal-body .form-group {
+  margin-bottom: 0rem;
+  margin-top: .5rem;
+}
+
+.modal-body .form-group:first-child {
+  margin-top: 0rem;
+}
+
+#cm-btn-container {
+  margin-bottom: 0px;
+}
+
+#submit-cm-btn {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25em;
+  color: #8FC6BB !important;
+  /* border: 1px solid #8FC6BB;
+  padding: 5px 30px;
+  border-radius: 40px; */
+}
+
+.vote-text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25em;
+  color: #8FC6BB !important;
+}
+
+.vote-button {
+  border: none;
+  background-color: transparent;
+  color: #8FC6BB !important;
+}
+
+.vote-button:focus {
+  border: none;
+  background-color: transparent;
+  color: #F4D28E !important;
+  box-shadow: none !important;
+  outline: none !important;
+
+}
+
+.vote-button:disabled {
+  border: none;
+  background-color: transparent;
+  color: rgb(78, 119, 138) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* 
+
+MEDIA QUERIES
+MEDIA QUERIES
+MEDIA QUERIES
+
+*/
+
+@media screen and (min-width: 23em) {
   
-  article.card:hover .infos {
-    transform: translateY(-260px);
-  }
-  
-  article.card:hover .infos .seats, article.card:hover .infos .txt, article.card:hover .infos .details {
-    opacity: 1;
+  article.card .infos .cm-score {
+    bottom: 270px;
   }
 
-  .add-new-cm {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.25em;
-  }
-  
-/* Media queries */
-/* Tablet */
-  @media only screen and (max-width: 768px) {
-    article.card {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        left: 50%;
-        width: 80vw;
-        height: 800px;
-        transform: translate(-50%, -50%) translateZ(0);
-        border-radius: 10px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-        overflow: hidden;
-      }
-  }
+  @media screen and (min-height: 50em) {
+    
+    article.card .infos .cm-score {
+      bottom: 380px;
+    }
 
-  /* Tablet */
-  @media only screen and (max-width: 425px) {
-    article.card {
-        position: absolute;
-        left: 50%;
-        top: 40%;
-        left: 50%;
-        width: 90vw;
-        height: 600px;
-        transform: translate(-50%, -50%) translateZ(0);
-        border-radius: 6px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-        overflow: hidden;
-      }
+    article.card .infos .subtitle, article.card .infos .subtitle2 {
+      font-size: 1.25rem;
+    }
 
-      article.card .infos {
-        width: auto;
-        height: 400px;
-        position: relative;
-        padding: 14px 24px;
-        background: #fff;
-        transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
-      }
+    article.card:hover .infos {
+      transform: translateY(-300px);
+    }
 
-      article.card .thumb {
-        width: auto;
-        min-height: 500px;
-        background-size: cover;
-        border-radius: 3px;
-      }
-  }
+    .modal-body .form-group {
+      margin-bottom: 0rem;
+      margin-top: 1.5rem;
+    }
 
-  .modal-content {
-    border-radius: 5px !important;
-    border: 1px solid transparent !important;
-  }
-  .modal-header {
-    background-color: #2A404A;
-    margin-top: -1px !important;
-    border-bottom: none !important;
-  }
+  } 
 
-  h5.modal-title {
-    color: white;
-  }
-
-  button.close {
-    color: white;
-    text-shadow: none !important;
-  }
-
-  .modal-body label {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #2A404A;
-  }
-
-  .modal-body input {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    padding: 15px;
-    padding-top: 23px;
-    padding-bottom: 23px;
-  }
-
-  .modal-body .form-group {
-    margin-bottom: 2rem;
-  }
-
-  .modal-body .form-group:first-child {
-    margin-top: 2rem;
-  }
-
-  #cm-btn-container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #cm-2-btn-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  #submit-cm-btn {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.25em;
-    color: #8FC6BB !important;
-    /* border: 1px solid #8FC6BB;
-    padding: 5px 30px;
-    border-radius: 40px; */
-  }
-
-  #delete-cm-btn {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.3em;
-    color: #D3524E;
-    margin-left: 5rem;
-  }
-
-  #cancel-cm-btn {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.3em;
-    color: rgb(194, 194, 194);
-    margin-left: 0rem;
-  }
-
-  .vote-text {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.25em;
-    color: #8FC6BB !important;
-  }
-
-  .vote-button {
-    border: none;
-    background-color: transparent;
-    color: #8FC6BB !important;
-    margin-bottom: 20px;
-  }
-
-  .vote-button:focus {
-    border: none;
-    background-color: transparent;
-    color: #F4D28E !important;
-    box-shadow: none !important;
-    outline: none !important;
-
-  }
-
-  .vote-button:disabled {
-    border: none;
-    background-color: transparent;
-    color: rgb(78, 119, 138) !important;
-    box-shadow: none !important;
-    outline: none !important;
-
-  }
-
-  .cm-score {
-    height: 120px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+}

@@ -116,7 +116,7 @@ export default class AllCmCard extends Component {
                     <div className="infos">
                         <p className="double-click-message">Double-click the card to edit or delete</p>
 
-                        <h3 className="date">{this.props.copingMechInfo}</h3>
+                        <h3 className="subtitle">{this.props.copingMechInfo}</h3>
                         <p className="txt">{this.props.copingMechInfo2}</p>
                         <div className="cm-score">
                             <IconContext.Provider value={{ size: '1.25em' }} >

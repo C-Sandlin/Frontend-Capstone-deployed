@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { blockStatement } from '@babel/types';
 
 function Dot(props) {
   return (
@@ -18,10 +19,12 @@ function Dot(props) {
 
 export default function IndicatorDots(props) {
   const wrapperStyle = {
+    display: 'block',
+    marginBottom: '10px',
     position: 'relative',
     width: '100%',
     zIndex: '100',
-    bottom: '200px',
+    bottom: '5vh',
     textAlign: 'center'
   }
 
