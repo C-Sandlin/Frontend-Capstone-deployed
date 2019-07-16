@@ -131,7 +131,7 @@ export default class AllCmCard extends Component {
                     <ModalHeader toggle={this.toggleEditModal} >
                         Edit Coping Mechanism
                     </ModalHeader>
-                    <ModalBody>
+                    <ModalBody >
                         < Form >
                             <FormGroup>
                                 <Label for="editTitle">Title</Label>

@@ -173,6 +173,30 @@ button.close {
   border-radius: 40px; */
 }
 
+#delete-cm-btn {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3em;
+  color: #D3524E;
+  margin-left: 5rem;
+}
+
+#cancel-cm-btn {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3em;
+  color: rgb(194, 194, 194);
+  margin-left: 0rem;
+}
+
+#cm-2-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .vote-text {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 500;
@@ -238,5 +262,138 @@ MEDIA QUERIES
     }
 
   } 
+}
+
+@media screen and (min-width: 48em) {
+
+
+  .add-new-cm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+  }
+
+  article.card .infos {
+    padding: 3rem;
+  }
+
+  article.card .infos .subtitle, article.card .infos .subtitle2 {
+    font-size: 2rem;
+  }
+
+  article.card .infos .txt, article.card .infos .txt2 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+
+  article.card .infos .double-click-message {
+    font-size: 1.3rem;
+  }
+
+  article.card .infos .cm-score {
+    bottom: 450px;
+  }
+
+  .vote-button, .vote-text {
+    font-size: 1.4rem;
+  }
+
+}
+
+@media screen and (min-width: 60em) {
+
+  article.card {
+    width: 50vw;
+  }
+  
+  .add-new-cm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+  }
+
+  article.card:hover .infos {
+    transform: translateY(-220px);
+  }
+
+  article.card .infos {
+    padding: 3rem;
+  }
+
+  article.card .infos .subtitle, article.card .infos .subtitle2 {
+    font-size: 1.3rem;
+  }
+
+  article.card .infos .txt, article.card .infos .txt2 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  article.card .infos .double-click-message {
+    font-size: 1rem;
+  }
+
+  article.card .infos .cm-score {
+    bottom: 330px;
+  }
+
+  .vote-button, .vote-text {
+    font-size: 1rem;
+  }
+
+  h5.modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-body {
+    padding: 3rem !important;
+  }
+
+  .modal-body input {
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  #submit-cm-btn {
+    margin: 0; 
+    margin-right: 0px !important;
+  }
+
+  #cm-btn-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: flex-start;
+  }
+
+  #cm-add-btn-container {
+    margin-left: 30px;
+    margin-bottom: 40px !important;
+  }
+
+}
+
+@media screen and (min-width: 90em) {
+
+  article.card:hover .infos {
+    transform: translateY(-300px);
+  }
+
+  article.card .infos .cm-score {
+    bottom: 500px;
+  }
+
+  .modal-body input {
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  div#cm-btn-container {
+    margin-top: 5vh;
+    margin-bottom: 0;
+  }
+
 
 }
