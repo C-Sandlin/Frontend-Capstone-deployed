@@ -137,4 +137,136 @@ button:focus {
     outline-color: transparent;
     outline-style: none;
     outline: none;
-  }
+}
+
+@media screen and (min-width: 22em) {
+    .stats-card > h2 {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 48em) {
+
+    .quick-hits-container {
+        display: flex;
+        flex-direction: row;
+        width: 85vw;
+        margin: auto;
+        margin-top: 2.5vh;
+    }
+    
+    .quick-hit {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        flex: 1;
+        justify-content: center;
+        align-content: baseline;
+        text-align: center;
+    }
+    
+    .quick-hit:nth-child(1), .quick-hit:nth-child(3) {
+        border-bottom: 0px;
+    }
+    
+    .stats-divider {
+        width: 1px;
+        margin: 20px 0;
+        background: rgb(169, 169, 169);
+        display: block;
+    }
+
+    .carousel-container {
+        width: 85vw;
+        margin: auto;
+        height: 80vh;
+     }
+
+    
+     canvas#donut-chart {
+        width: 490px !important;
+        height: 450px !important;
+    }
+
+    .stats-card > h2 {
+        font-size: 1.7rem;
+    }
+
+    .stats-card {
+        width: 85vw;
+        height: 100%;
+        background-color: #D1E8E0;
+        border-radius: 5px;
+        margin: auto;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .chartjs-size-monitor > canvas{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 60em) {
+
+    .quick-hits-container {
+        width: 75vw;
+        margin: auto;
+        margin-top: 4vh;
+    }
+
+    .carousel-container {
+        width: 75vw;
+        margin: auto;
+        height: 80vh;
+     }
+
+     .stats-card {
+        width: 75vw;
+        padding: .8rem;
+     }
+
+     .stats-card > h2 {
+        margin-top: .5rem;
+    }
+    
+     canvas#donut-chart {
+        width: 440px !important;
+        height: 400px !important;
+    }
+
+}
+
+@media screen and (min-width: 90em) {
+
+    .quick-hits-container {
+        width: 45vw;
+        margin: auto;
+        margin-top: 4vh;
+    }
+
+    .carousel-container {
+        width: 65vw;
+        margin: auto;
+        height: 80vh;
+     }
+
+     .stats-card {
+        width: 65vw;
+        padding: .8rem;
+     }
+
+     .stats-card > h2 {
+        margin-top: .5rem;
+    }
+    
+     canvas#donut-chart {
+        width: 500px !important;
+        height: 460px !important;
+    }
+
+}
