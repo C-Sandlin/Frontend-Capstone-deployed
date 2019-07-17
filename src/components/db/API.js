@@ -95,17 +95,18 @@ const API = {
     // working
     getAllEntries: () => {
         return fetch(`${fb}/loggedEntries.json?print=pretty`)
-            .then(results => results.json())
-            .then(e => {
-                const data = e
-                return Object.keys(data).map(key => {
-                    return { id: key, ...data[key] }
-                })
-            })
-            .then(e => {
-                let desiredResults = e.filter(item => item.userId === currentUser)
-                return desiredResults;
-            })
+            .then(results => results.json());
+
+        // .then(e => {
+        //     const data = e
+        //     return Object.keys(data).map(key => {
+        //         return { id: key, ...data[key] }
+        //     })
+        // })
+        // .then(e => {
+        //     let desiredResults = e.filter(item => item.userId === currentUser)
+        //     return desiredResults;
+        // })
     },
 
     // working
