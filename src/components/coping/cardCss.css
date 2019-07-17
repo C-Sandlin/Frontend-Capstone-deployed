@@ -12,6 +12,11 @@
   margin-bottom: 10px;
 }
 
+.add-new-cm:hover {
+  cursor: pointer;
+  color: rgb(81, 123, 143);
+}
+
 article.card {
   width: 90vw;
   margin: auto;
@@ -171,6 +176,16 @@ button.close {
   /* border: 1px solid #8FC6BB;
   padding: 5px 30px;
   border-radius: 40px; */
+}
+
+#submit-cm-btn:hover, #cancel-cm-btn:hover {
+  cursor: pointer;
+  color: rgb(78, 119, 138) !important;
+}
+
+#delete-cm-btn:hover {
+  cursor: pointer;
+  color: rgb(235, 14, 18);
 }
 
 #delete-cm-btn {
