@@ -4,6 +4,7 @@ import moment from "moment";
 import { FiClock, FiCalendar } from "react-icons/fi";
 import { MdBrightness1 } from "react-icons/md"
 import API from "../db/API";
+import { getUserFromLocalStorage } from "../login/LoginHandler";
 
 
 
@@ -23,16 +24,33 @@ export default class Entries extends Component {
     }
 
     componentDidMount() {
+        console.log("entry component mounted")
+        let currentUser = this.props.user.id;
+
         const newState = {
             allEntries: []
         }
 
         API.getAllEntries()
+            .then(e => {
+                const data = e
+                return Object.keys(data).map(key => {
+                    return { id: key, ...data[key] }
+                })
+            })
+            .then(e => {
+                let desiredResults = e.filter(item => item.userId === currentUser)
+                return desiredResults;
+            })
             .then(entries => newState.allEntries = entries)
             .then(() => this.setState(newState));
     }
 
+
+
     render() {
+        console.log(`render called, new user ${this.props.user.username}`);
+        console.log(this.state.allEntries);
         return (
             <div className="entries-container">
                 {
