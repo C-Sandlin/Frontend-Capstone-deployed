@@ -42,7 +42,7 @@ export default class Map extends Component {
         }).addTo(this.map);
 
 
-        if (navigator.geolocation && this.props.locationResults) {
+        if (this.props.locationResults) {
             navigator.geolocation.getCurrentPosition(position => {
 
                 let coords = position.coords;
