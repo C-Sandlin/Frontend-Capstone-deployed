@@ -44,7 +44,7 @@ export default class TopNav extends React.Component {
                     <NavLink to="/stats" className="menuItem" activeClassName="currentLink"><FiBarChart2 style={{ marginRight: "10px", marginBottom: "5px" }} />Statistics</NavLink>
                     <NavLink to="/support" className="menuItem" activeClassName="currentLink"><FiSearch style={{ marginRight: "10px", marginBottom: "5px" }} />Support</NavLink>
                     {/* <NavLink to="/profile" className="menuItem" activeClassName="currentLink"><FiUser style={{ marginRight: "10px", marginBottom: "5px" }} />User Profile</NavLink> */}
-                    <NavLink to="/login" onClick={logout} className="menuItem" activeClassName="currentLink"><FiCornerDownLeft style={{ marginRight: "10px", marginBottom: "5px" }} />Logout</NavLink>
+                    <NavLink to="/" onClick={logout} className="menuItem" activeClassName="currentLink"><FiCornerDownLeft style={{ marginRight: "10px", marginBottom: "5px" }} />Logout</NavLink>
                 </Menu>
             </IconContext.Provider >
         );

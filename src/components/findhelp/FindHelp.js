@@ -16,6 +16,7 @@ export default class Contact extends Component {
         modal: false,
         chevron: false,
         locationResults: [],
+        resultsReceived: false
     }
 
     toggleDrop = () => {
@@ -35,7 +36,10 @@ export default class Contact extends Component {
                 let coords = yourPosition.coords;
                 if (coords !== undefined) {
                     API.hereMaps(coords.latitude, coords.longitude)
-                        .then(results => this.setState({ locationResults: results.results.items }))
+                        .then(results => this.setState({
+                            locationResults: results.results.items,
+                            resultsReceived: true
+                        }))
                 }
             })
         }
@@ -96,7 +100,7 @@ export default class Contact extends Component {
                         Therapists Near Your Location
                     </ModalHeader>
                     <ModalBody>
-                        <Map locationResults={this.state.locationResults} />
+                        <Map locationResults={this.state.locationResults} resultsReceived={this.state.resultsReceived} />
                     </ModalBody>
                 </Modal>
             </>

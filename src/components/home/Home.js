@@ -138,7 +138,7 @@ class Home extends Component {
     render() {
         return (
             <>
-                <Route path="/login" render={(props) => <Login {...props} onLogin={(user) => this.setState({ user: user })} />} />
+                <Route exact path="/" render={(props) => <Login {...props} onLogin={(user) => this.setState({ user: user })} />} />
                 <Route path="/register" render={(props) => <Register {...props} onRegister={(user) => this.setState({ user: user })} />} />
                 <Route exact path="/regulate" render={(props) => {
                     return this.state.user ? (
@@ -146,7 +146,7 @@ class Home extends Component {
                             <TopNav resetState={this.resetState} user={this.state.user} />
                             <Regulate {...props} {...this.props} user={this.state.user} onLogout={logout} resetState={this.resetState} />
                         </>)
-                        : (<Redirect to="/login" />)
+                        : (<Redirect to="/" />)
                 }} />
                 <Route exact path="/regulate/new" render={(props) => {
                     return this.state.user ? (
@@ -169,7 +169,7 @@ class Home extends Component {
                                 newUserLoginNavigateToEntries={this.newUserLoginNavigateToEntries}
                             />
                         </>)
-                        : (<Redirect to="/login" />)
+                        : (<Redirect to="/" />)
                 }} />
                 <Route exact path="/entries" render={(props) => {
                     return this.state.user ? (
@@ -181,7 +181,7 @@ class Home extends Component {
                                 onLogout={logout}
                             />
                         </>)
-                        : (<Redirect to="/login" />)
+                        : (<Redirect to="/" />)
                 }} />
                 <Route exact path="/coping" render={(props) => {
                     return this.state.user ? (
@@ -209,7 +209,7 @@ class Home extends Component {
 
                             />
                         </>)
-                        : (<Redirect to="/login" />)
+                        : (<Redirect to="/" />)
                 }} />
                 <Route exact path="/stats" render={(props) => {
                     return this.state.user ? (
@@ -220,7 +220,7 @@ class Home extends Component {
                                 onLogout={logout}
                             />
                         </>)
-                        : (<Redirect to="/login" />)
+                        : (<Redirect to="/" />)
                 }} />
                 <Route exact path="/support" render={(props) => {
                     return this.state.user ? (
@@ -232,7 +232,7 @@ class Home extends Component {
                                 onLogout={logout}
                             />
                         </>)
-                        : (<Redirect to="/login" />)
+                        : (<Redirect to="/" />)
                 }} />
                 <Route exact path="/profile" render={(props) => {
                     return this.state.user ? (
@@ -240,7 +240,7 @@ class Home extends Component {
                             <TopNav resetState={this.resetState} user={this.state.user} />
                             <Profile {...props} user={this.state.user} onLogout={logout} />
                         </>)
-                        : (<Redirect to="/login" />)
+                        : (<Redirect to="/" />)
                 }} />
             </>
         );

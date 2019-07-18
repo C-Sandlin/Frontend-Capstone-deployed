@@ -60,7 +60,7 @@ export default class Register extends Component {
                         />
                         <Button content="Register" />
                         <Message className="auth-message">
-                            Already registered? <Link to="/login">Log In</Link>
+                            Already registered? <Link to="/">Log In</Link>
                         </Message>
                     </Form>
 
