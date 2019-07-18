@@ -3,7 +3,7 @@
 <br>
 <br>
 
-<img src="https://firebasestorage.googleapis.com/v0/b/colins-capstone-1558565262749.appspot.com/o/iFeel_Branding-04.png?alt=media&token=418a7273-3eff-4864-bcb7-9842ce9b6108" alt="i-Feel-Branding-08" border="0">
+<img src="https://firebasestorage.googleapis.com/v0/b/colins-capstone-1558565262749.appspot.com/o/iFeel_Branding-04.png?alt=media&token=418a7273-3eff-4864-bcb7-9842ce9b6108" alt="i-Feel-Branding-08" border="0" width="500px">
 
 # Project Summary
 I created Regulate to help both clients and therapists as they work together to improve their mental health. My wife is a therapist and together we realized the need for an intuitive, intelligent application to help clients track data, recall coping techniques, and find support. Over time, this data can make a significant impact in how clients progress and manage their unique situations.
