@@ -21,7 +21,7 @@ export default class Map extends Component {
 
 
     componentDidMount() {
-        console.log("map is now mounted")
+
         //create original view of map when loaded, set to generic Tennessee Coordinates and a (not very close zoom)
         this.map = L.map('map').setView([35.860119, -86.660156], 8);
         if (navigator.geolocation) {
@@ -44,7 +44,7 @@ export default class Map extends Component {
 
         if (navigator.geolocation && this.props.locationResults) {
             navigator.geolocation.getCurrentPosition(position => {
-                console.log("running the if block")
+
                 let coords = position.coords;
                 this.map.setView([coords.latitude, coords.longitude], 12);
 

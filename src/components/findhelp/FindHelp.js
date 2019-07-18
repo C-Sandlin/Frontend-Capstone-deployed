@@ -27,7 +27,7 @@ export default class Contact extends Component {
     }
 
     componentDidMount() {
-        console.log("findHelp is mounted")
+
 
         //Fetch locations from API, 
         if (navigator.geolocation) {
@@ -36,7 +36,7 @@ export default class Contact extends Component {
                 if (coords !== undefined) {
                     API.hereMaps(coords.latitude, coords.longitude)
                         .then(results => {
-                            console.log(results);
+
                             return results;
                         })
                         .then(results => this.setState({ locationResults: results.results.items }))

@@ -40,6 +40,7 @@ export default class Stats extends React.Component {
             weeksEntries: [],
             monthsEntries: [],
         }
+        let currentUser = this.props.user.id;
 
         // fetching entries from specific categories of moods and setting in state so the graphs can use the data
         API.getSpecificEntryCategory(5)
@@ -53,6 +54,16 @@ export default class Stats extends React.Component {
             .then(() => API.getSpecificEntryCategory(1))
             .then(cat1 => newState.cat1Entries = cat1)
             .then(() => API.getAllEntries())
+            .then(e => {
+                const data = e
+                return Object.keys(data).map(key => {
+                    return { id: key, ...data[key] }
+                })
+            })
+            .then(e => {
+                let desiredResults = e.filter(item => item.userId === currentUser)
+                return desiredResults;
+            })
             .then(allentries => newState.allEntries = allentries)
             .then(() => this.setState(newState))
 
@@ -70,7 +81,7 @@ export default class Stats extends React.Component {
 
     assignData = () => {
         const lineInfo = {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
             datasets: [
                 {
                     label: 'Average Mood',
@@ -94,39 +105,40 @@ export default class Stats extends React.Component {
                     backgroundColor: ['#8FC6BB', '#BADED2', '#F4D28E', '#E8C5C1', '#DB968D']
                 }]
             }
-
             return donutdata;
         }
     }
 
     entriesThisWeek = () => {
         let weeksEntries = [];
-        const today = moment(new Date());
+        // const today = moment(new Date());
         const from_date = moment().startOf('week');
         const to_date = moment().endOf('week');
 
+
+
         this.state.allEntries.map(entry => {
             if (moment(entry.dateLogged).isBetween(from_date, to_date)) {
-                return weeksEntries.push(today)
+                return weeksEntries.push(entry)
             }
+            return weeksEntries;
         })
-
         return weeksEntries;
     }
 
     entriesThisMonth = () => {
         let monthsEntries = [];
-        const today = moment(new Date());
+        // const today = moment(new Date());
         const from_date = moment().startOf('month');
         const to_date = moment().endOf('month');
 
         this.state.allEntries.map(entry => {
             if (moment(entry.dateLogged).isBetween(from_date, to_date)) {
-                return monthsEntries.push(today)
+                return monthsEntries.push(entry)
             }
+            return monthsEntries;
         })
-
-        return monthsEntries;
+        return monthsEntries
     }
 
     getLineData = () => {
@@ -139,34 +151,34 @@ export default class Stats extends React.Component {
         let group6Entries = [];
 
         // use moment to find dates between other dates
-        const from_date1 = moment().month(0).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
+        const from_date1 = moment().month(1).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
         const to_date1 = moment(from_date1).endOf('month');
-        const from_date2 = moment().month(1).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
+        const from_date2 = moment().month(2).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
         const to_date2 = moment(from_date2).endOf('month');
-        const from_date3 = moment().month(2).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
+        const from_date3 = moment().month(3).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
         const to_date3 = moment(from_date3).endOf('month');
-        const from_date4 = moment().month(3).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
+        const from_date4 = moment().month(4).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
         const to_date4 = moment(from_date4).endOf('month');
-        const from_date5 = moment().month(4).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
+        const from_date5 = moment().month(5).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
         const to_date5 = moment(from_date5).endOf('month');
-        const from_date6 = moment().month(5).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
+        const from_date6 = moment().month(6).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
         const to_date6 = moment(from_date6).endOf('month');
 
         if (this.state.allEntries) {
             // for each entry, sort into array for the particular month
             this.state.allEntries.map(entry => {
                 if (moment(entry.dateLogged).isBetween(from_date1, to_date1)) {
-                    group1Entries.push(entry.moodCategoryId)
+                    return group1Entries.push(entry.moodCategoryId)
                 } else if (moment(entry.dateLogged).isBetween(from_date2, to_date2)) {
-                    group2Entries.push(entry.moodCategoryId)
+                    return group2Entries.push(entry.moodCategoryId)
                 } else if (moment(entry.dateLogged).isBetween(from_date3, to_date3)) {
-                    group3Entries.push(entry.moodCategoryId)
+                    return group3Entries.push(entry.moodCategoryId)
                 } else if (moment(entry.dateLogged).isBetween(from_date4, to_date4)) {
-                    group4Entries.push(entry.moodCategoryId)
+                    return group4Entries.push(entry.moodCategoryId)
                 } else if (moment(entry.dateLogged).isBetween(from_date5, to_date5)) {
-                    group5Entries.push(entry.moodCategoryId)
+                    return group5Entries.push(entry.moodCategoryId)
                 } else if (moment(entry.dateLogged).isBetween(from_date6, to_date6)) {
-                    group6Entries.push(entry.moodCategoryId)
+                    return group6Entries.push(entry.moodCategoryId)
                 }
             })
 
@@ -201,17 +213,17 @@ export default class Stats extends React.Component {
                 <div className="overall-stats-container">
                     <div className="quick-hits-container">
                         <div className="quick-hit">
-                            <h4 className="stat-number">{this.state.allEntries.length}</h4>
+                            <h4 className="stat-number">{(this.state.allEntries !== undefined) ? (this.state.allEntries.length) : (0)}</h4>
                             <p>Total Entries</p>
                         </div>
                         <div className="stats-divider"></div>
                         <div className="quick-hit">
-                            <h4 className="stat-number">{this.state.weeksEntries.length}</h4>
+                            <h4 className="stat-number">{(this.state.weeksEntries !== undefined) ? (this.state.weeksEntries.length) : (0)}</h4>
                             <p>Entries this Week</p>
                         </div>
                         <div className="stats-divider"></div>
                         <div className="quick-hit">
-                            <h4 className="stat-number">{this.state.monthsEntries.length}</h4>
+                            <h4 className="stat-number">{(this.state.monthsEntries !== undefined) ? (this.state.monthsEntries.length) : (0)}</h4>
                             <p>Entries this Month</p>
                         </div>
                     </div>
