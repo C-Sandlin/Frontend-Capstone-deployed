@@ -35,10 +35,6 @@ export default class Contact extends Component {
                 let coords = yourPosition.coords;
                 if (coords !== undefined) {
                     API.hereMaps(coords.latitude, coords.longitude)
-                        .then(results => {
-
-                            return results;
-                        })
                         .then(results => this.setState({ locationResults: results.results.items }))
                 }
             })
