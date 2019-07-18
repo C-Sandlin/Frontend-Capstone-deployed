@@ -40,6 +40,7 @@ export default class Stats extends React.Component {
             weeksEntries: [],
             monthsEntries: [],
         }
+        let currentUser = this.props.user.id;
 
         // fetching entries from specific categories of moods and setting in state so the graphs can use the data
         API.getSpecificEntryCategory(5)
@@ -53,8 +54,19 @@ export default class Stats extends React.Component {
             .then(() => API.getSpecificEntryCategory(1))
             .then(cat1 => newState.cat1Entries = cat1)
             .then(() => API.getAllEntries())
+            .then(e => {
+                const data = e
+                return Object.keys(data).map(key => {
+                    return { id: key, ...data[key] }
+                })
+            })
+            .then(e => {
+                let desiredResults = e.filter(item => item.userId === currentUser)
+                return desiredResults;
+            })
             .then(allentries => newState.allEntries = allentries)
             .then(() => this.setState(newState))
+            .then(() => console.log(this.state.allEntries))
 
             // Create data necessary for the donut graph
             .then(() => this.getDonutData())
@@ -105,13 +117,14 @@ export default class Stats extends React.Component {
         const from_date = moment().startOf('week');
         const to_date = moment().endOf('week');
 
+        console.log(`"entries this week:" ${this.state.weeksEntries}`)
+
         this.state.allEntries.map(entry => {
             if (moment(entry.dateLogged).isBetween(from_date, to_date)) {
                 return weeksEntries.push(today)
             }
+            return weeksEntries;
         })
-
-        return weeksEntries;
     }
 
     entriesThisMonth = () => {
@@ -120,13 +133,13 @@ export default class Stats extends React.Component {
         const from_date = moment().startOf('month');
         const to_date = moment().endOf('month');
 
+
         this.state.allEntries.map(entry => {
             if (moment(entry.dateLogged).isBetween(from_date, to_date)) {
                 return monthsEntries.push(today)
             }
+            return monthsEntries;
         })
-
-        return monthsEntries;
     }
 
     getLineData = () => {
@@ -201,17 +214,17 @@ export default class Stats extends React.Component {
                 <div className="overall-stats-container">
                     <div className="quick-hits-container">
                         <div className="quick-hit">
-                            <h4 className="stat-number">{this.state.allEntries.length}</h4>
+                            <h4 className="stat-number">{(this.state.allEntries !== undefined) ? (this.state.allEntries.length) : (0)}</h4>
                             <p>Total Entries</p>
                         </div>
                         <div className="stats-divider"></div>
                         <div className="quick-hit">
-                            <h4 className="stat-number">{this.state.weeksEntries.length}</h4>
+                            <h4 className="stat-number">{(this.state.weeksEntries !== undefined) ? (this.state.weeksEntries.length) : (0)}</h4>
                             <p>Entries this Week</p>
                         </div>
                         <div className="stats-divider"></div>
                         <div className="quick-hit">
-                            <h4 className="stat-number">{this.state.monthsEntries.length}</h4>
+                            <h4 className="stat-number">{(this.state.monthsEntries !== undefined) ? (this.state.monthsEntries.length) : (0)}</h4>
                             <p>Entries this Month</p>
                         </div>
                     </div>
