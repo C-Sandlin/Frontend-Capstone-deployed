@@ -42,15 +42,18 @@ export default class Map extends Component {
         }).addTo(this.map);
 
 
-        if (this.props.resultsReceived === true) {
+        this.componentDidUpdate = () => {
+            if (this.props.resultsReceived === true) {
+                console.log("set to true")
 
-            this.map.setView([this.props.coords[0], this.props.coords[1]], 12);
+                this.map.setView([this.props.coords[0], this.props.coords[1]], 12);
 
-            this.props.locationResults.map(location => {
-                return L.marker([location.position[0], location.position[1]])
-                    .bindPopup(`<h6>${location.title}</h6><p>${location.vicinity}</p>`)
-                    .addTo(this.map);
-            })
+                this.props.locationResults.map(location => {
+                    return L.marker([location.position[0], location.position[1]])
+                        .bindPopup(`<h6>${location.title}</h6><p>${location.vicinity}</p>`)
+                        .addTo(this.map);
+                })
+            }
         }
 
 
