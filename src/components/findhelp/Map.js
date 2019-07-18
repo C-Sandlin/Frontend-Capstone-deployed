@@ -43,16 +43,13 @@ export default class Map extends Component {
 
 
         if (this.props.resultsReceived === true) {
-            navigator.geolocation.getCurrentPosition(position => {
 
-                let coords = position.coords;
-                this.map.setView([coords.latitude, coords.longitude], 12);
+            this.map.setView([this.props.coords[0], this.props.coords[1]], 12);
 
-                this.props.locationResults.map(location => {
-                    return L.marker([location.position[0], location.position[1]])
-                        .bindPopup(`<h6>${location.title}</h6><p>${location.vicinity}</p>`)
-                        .addTo(this.map);
-                })
+            this.props.locationResults.map(location => {
+                return L.marker([location.position[0], location.position[1]])
+                    .bindPopup(`<h6>${location.title}</h6><p>${location.vicinity}</p>`)
+                    .addTo(this.map);
             })
         }
 
