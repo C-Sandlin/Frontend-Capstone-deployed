@@ -24,7 +24,7 @@ export default class Entries extends Component {
     }
 
     componentDidMount() {
-        console.log("entry component mounted")
+
         let currentUser = this.props.user.id;
 
         const newState = {
@@ -49,8 +49,7 @@ export default class Entries extends Component {
 
 
     render() {
-        console.log(`render called, new user ${this.props.user.username}`);
-        console.log(this.state.allEntries);
+
         return (
             <div className="entries-container">
                 {
